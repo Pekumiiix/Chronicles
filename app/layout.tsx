@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "To preserve, validate, and share Africa's rich oral heritage using blockchain, AI, and community engagement.",
   authors: [{ name: "Chronicles Dev Team", url: "link goes here." }],
+  applicationName: "Chronicles",
   openGraph: {
     title: "Chronicles: Blockchain Oral History Preservation Network",
     description:
