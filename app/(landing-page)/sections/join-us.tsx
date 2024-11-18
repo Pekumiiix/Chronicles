@@ -19,6 +19,7 @@ import { Youtube } from "lucide-react";
 import { Instagram } from "lucide-react";
 import DiscordIcon from "@/components/icons/discord";
 import FacebookIcon from "@/components/icons/facebook";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -87,21 +88,36 @@ export default function JoinUs() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-y-5 gap-x-10 max-w-[248px]">
-          <div className="p-3 rounded-xl bg-stroke">
+          <Link
+            href={`/`}
+            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+          >
             <DiscordIcon className="w-8 h-8 fill-caption" />
-          </div>
-          <div className="p-3 rounded-xl bg-stroke">
+          </Link>
+          <Link
+            href={`/`}
+            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+          >
             <Twitter size="32px" color="#757575" />
-          </div>
-          <div className="p-3 rounded-xl bg-stroke">
+          </Link>
+          <Link
+            href={`/`}
+            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+          >
             <Youtube size="32px" color="#757575" />
-          </div>
-          <div className="p-3 rounded-xl bg-stroke">
+          </Link>
+          <Link
+            href={`/`}
+            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+          >
             <Instagram size="32px" color="#757575" />
-          </div>
-          <div className="p-3 rounded-xl bg-stroke">
+          </Link>
+          <Link
+            href={`/`}
+            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+          >
             <FacebookIcon className="w-8 h-8 fill-caption" />
-          </div>
+          </Link>
         </div>
       </div>
     </section>
