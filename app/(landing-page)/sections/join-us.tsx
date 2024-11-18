@@ -20,7 +20,6 @@ import { Instagram } from "lucide-react";
 import DiscordIcon from "@/components/icons/discord";
 import FacebookIcon from "@/components/icons/facebook";
 import Link from "next/link";
-import { Url } from "url";
 import { ReactElement } from "react";
 
 const formSchema = z.object({
