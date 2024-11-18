@@ -79,10 +79,16 @@ export default {
             height: "0",
           },
         },
+        "border-spin": {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "border-spin": "border-spin 7s linear infinite",
       },
     },
   },
