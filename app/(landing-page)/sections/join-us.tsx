@@ -20,6 +20,8 @@ import { Instagram } from "lucide-react";
 import DiscordIcon from "@/components/icons/discord";
 import FacebookIcon from "@/components/icons/facebook";
 import Link from "next/link";
+import { Url } from "url";
+import { ReactElement } from "react";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -88,38 +90,30 @@ export default function JoinUs() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-y-5 gap-x-10 max-w-[248px]">
-          <Link
-            href={`/`}
-            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
-          >
-            <DiscordIcon className="w-8 h-8 fill-caption" />
-          </Link>
-          <Link
-            href={`/`}
-            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
-          >
-            <Twitter size="32px" color="#757575" />
-          </Link>
-          <Link
-            href={`/`}
-            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
-          >
-            <Youtube size="32px" color="#757575" />
-          </Link>
-          <Link
-            href={`/`}
-            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
-          >
-            <Instagram size="32px" color="#757575" />
-          </Link>
-          <Link
-            href={`/`}
-            className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
-          >
-            <FacebookIcon className="w-8 h-8 fill-caption" />
-          </Link>
+          {community_links.map((item: LinkProps, index: number) => (
+            <Link
+              href={item.href}
+              key={index}
+              className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+            >
+              {item.icon}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
+}
+
+const community_links: LinkProps[] = [
+  { href: "/", icon: <DiscordIcon className="w-8 h-8 fill-caption" /> },
+  { href: "/", icon: <Twitter size="32px" color="#757575" /> },
+  { href: "/", icon: <Youtube size="32px" color="#757575" /> },
+  { href: "/", icon: <Instagram size="32px" color="#757575" /> },
+  { href: "/", icon: <FacebookIcon className="w-8 h-8 fill-caption" /> },
+];
+
+interface LinkProps {
+  href: string;
+  icon: ReactElement;
 }
