@@ -69,7 +69,7 @@ export default function JoinUs() {
                         className="rounded-[24px] px-5 bg-[#070708]"
                         size={`black`}
                       >
-                        Submit
+                        Sign Up
                       </Button>
                     </div>
                   </FormControl>
