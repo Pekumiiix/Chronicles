@@ -1,8 +1,6 @@
 import { ReactElement } from "react";
 import AnimatedBorderWrapper from "../components/animated-border-wrapper";
-import { LogInIcon } from "lucide-react";
-import { UploadIcon } from "lucide-react";
-import { BadgeCheck } from "lucide-react";
+import { LogInIcon, UploadIcon, BadgeCheck } from "lucide-react";
 
 export default function HowItWorks() {
   return (

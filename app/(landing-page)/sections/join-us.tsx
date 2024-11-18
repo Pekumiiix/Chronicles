@@ -14,9 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Twitter } from "lucide-react";
-import { Youtube } from "lucide-react";
-import { Instagram } from "lucide-react";
+import { Twitter, Youtube, Instagram } from "lucide-react";
 import DiscordIcon from "@/components/icons/discord";
 import FacebookIcon from "@/components/icons/facebook";
 import Link from "next/link";
