@@ -115,6 +115,6 @@
   .card-wrapper::before {
     background: conic-gradient(#bababa 0%, #a41045 66%, #223b73 90%);
 
-    @apply absolute h-[175%] w-[175%] -left-[37.5%] -top-[37.5%] content-[''] animate-border-spin;
+    @apply absolute h-[200%] w-[200%] -left-[50%] -top-[50%] content-[''] animate-border-spin;
   }
 }

@@ -39,7 +39,7 @@ export default function JoinUs() {
   }
 
   return (
-    <section className="flex flex-col items-center gap-14 py-6 px-32">
+    <section className="container flex flex-col items-center gap-14 py-6 px-32">
       <div className="flex flex-col gap-10 max-w-[662px]">
         <SectionDescription
           title="Be Part of a Living Legacy"

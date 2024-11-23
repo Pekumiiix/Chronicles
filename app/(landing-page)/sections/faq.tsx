@@ -8,7 +8,7 @@ import SectionDescription from "../components/section-description";
 
 export default function FaqSection() {
   return (
-    <section className="flex flex-col gap-[72px] py-[10px] px-[352px]">
+    <section className="container flex flex-col gap-[72px] py-[10px] px-[352px]">
       <SectionDescription
         title="FAQs"
         caption="Everything You Need to Know About Preserving Stories and Earning

@@ -4,7 +4,7 @@ import { LogInIcon, UploadIcon, BadgeCheck } from "lucide-react";
 
 export default function HowItWorks() {
   return (
-    <section className="py-16 px-32 flex flex-col gap-[72px] items-center">
+    <section className="container py-16 px-32 flex flex-col gap-[72px] items-center">
       <p className="text-foregrpund text-[56px] leading-[62px] font-extrabold">
         How It Works
       </p>
