@@ -3,7 +3,7 @@ import SectionDescription from "../components/section-description";
 
 export default function Discover() {
   return (
-    <section className="container py-10 px-32 flex flex-col gap-[72px]">
+    <section className="container py-10 px-0 flex flex-col gap-[72px] overflow-hidden">
       <SectionDescription
         title="Discover Collections"
         caption="Discover unique pieces of African heritage preserved as digital collectibles"
@@ -11,16 +11,55 @@ export default function Discover() {
         captionClass="text-lg max-w-[776px]"
       />
 
-      <div className="flex items-center gap-6 overflow-x-hidden">
-        {top_card_details.map((item: CardProp, index: number) => (
-          <NFTCards
-            key={index}
-            image={item.image}
-            title={item.title}
-            caption={item.caption}
-            category={item.category}
-          />
-        ))}
+      <div className="flex items-center gap-6 whitespace-nowrap">
+        <div className="flex items-center gap-6 animate-slideToLeft">
+          {top_card_details.map((item: CardProp, index: number) => (
+            <NFTCards
+              key={index}
+              image={item.image}
+              title={item.title}
+              caption={item.caption}
+              category={item.category}
+            />
+          ))}
+        </div>
+        <div className="flex items-center gap-6 animate-slideToLeft">
+          {top_card_details.map((item: CardProp, index: number) => (
+            <NFTCards
+              key={index}
+              image={item.image}
+              title={item.title}
+              caption={item.caption}
+              category={item.category}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center gap-6 whitespace-nowrap">
+        <div className="flex items-center gap-6 animate-slideToRight">
+          {bottom_card_details.map((item: CardProp, index: number) => (
+            <NFTCards
+              key={index}
+              image={item.image}
+              title={item.title}
+              caption={item.caption}
+              category={item.category}
+            />
+          ))}
+        </div>
+
+        <div className="flex items-center gap-6 animate-slideToRight">
+          {bottom_card_details.map((item: CardProp, index: number) => (
+            <NFTCards
+              key={index}
+              image={item.image}
+              title={item.title}
+              caption={item.caption}
+              category={item.category}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -38,11 +77,13 @@ function NFTCards({
   category: string;
 }) {
   return (
-    <div className="flex flex-col pb-2 relative">
+    <div className="inline-flex flex-col pb-2 relative">
       <div className="flex items-center justify-center w-[336px] h-[219px] rounded-[8px] bg-[#E8E8E8]">
         <Image
-          src={`${image === "" ? "" : image}`}
-          alt=""
+          src={`${image === "" ? "/assets/landing-page/Vector.png" : image}`}
+          alt={title}
+          width={image ? 336 : 16}
+          height={image ? 219 : 14}
           className={
             image === ""
               ? "w-4 h-[14px]"
@@ -55,7 +96,7 @@ function NFTCards({
         {category}
       </p>
 
-      <div className="flex flex-col py-3 px-4 gap-1.5">
+      <div className="flex flex-col py-3 px-4 gap-1">
         <p className="font-semibold">{title}</p>
         <p className="text-caption text-xs">{caption}</p>
       </div>

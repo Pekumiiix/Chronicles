@@ -1,5 +1,6 @@
 import Footer from "./sections/footer";
 import localFont from "next/font/local";
+import Header from "./sections/header";
 
 const HK_Nova = localFont({
   src: "../fonts/HKNova-Medium.ttf",
@@ -12,8 +13,13 @@ export default function LandingPageLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className={`${HK_Nova.variable} flex flex-col gap-[105px]`}>
+    <body
+      className={`${HK_Nova.variable} flex flex-col items-center gap-[105px]`}
+    >
+      <Header />
+
       {children}
+
       <Footer />
     </body>
   );
