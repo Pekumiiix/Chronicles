@@ -36,7 +36,7 @@ export default function Discover() {
         </div>
       </div>
 
-      <div className="flex items-center gap-6 whitespace-nowrap">
+      <div className="flexnpm gap-6 whitespace-nowrap">
         <div className="flex items-center gap-6 animate-slideToRight">
           {bottom_card_details.map((item: CardProp, index: number) => (
             <NFTCards
@@ -77,7 +77,7 @@ function NFTCards({
   category: string;
 }) {
   return (
-    <div className="inline-flex flex-col pb-2 relative">
+    <div className="inline-flex flex-col pb-2 relative shadow-inset-sm rounded-2xl">
       <div className="flex items-center justify-center w-[336px] h-[219px] rounded-[8px] bg-[#E8E8E8]">
         <Image
           src={`${image === "" ? "/assets/landing-page/Vector.png" : image}`}

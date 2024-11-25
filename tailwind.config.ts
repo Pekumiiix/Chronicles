@@ -12,6 +12,9 @@ export default {
       fontSize: {
         title: "72px",
       },
+      boxShadow: {
+        "inset-sm": "inset 0px 0px 1px 0px #00000066",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

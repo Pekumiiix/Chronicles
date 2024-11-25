@@ -16,43 +16,114 @@ export default function StoriesSection() {
         captionClass="text-lg max-w-[776px]"
       />
 
-      <div className="w-full grid grid-cols-2 gap-8 h-fit relative">
-        {card_contents.map((item: CardProps, index: number) => (
+      <div className="w-full grid grid-cols-2 gap-y-5 gap-x-5 h-fit">
+        {/* {card_contents.map((item: CardProps, index: number) => (
           <StoryCard
             key={index}
+            index={index}
             icon={item.icon}
             title={item.title}
             caption={item.caption}
           />
-        ))}
+        ))} */}
+
+        <StoryCard
+          index={0}
+          className="story-border-gradient-left story-border-gradient-bottom-left"
+          icon={card_contents[0].icon}
+          title={card_contents[0].title}
+          caption={card_contents[0].caption}
+          dot
+        />
+
+        <StoryCard
+          index={0}
+          className="story-border-gradient-bottom-right"
+          icon={card_contents[1].icon}
+          title={card_contents[1].title}
+          caption={card_contents[1].caption}
+        />
+
+        <StoryCard
+          index={0}
+          className="story-border-gradient-left story-border-gradient-bottom-left"
+          icon={card_contents[2].icon}
+          title={card_contents[2].title}
+          caption={card_contents[2].caption}
+          dot
+        />
+
+        <StoryCard
+          index={0}
+          className="story-border-gradient-bottom-right"
+          icon={card_contents[3].icon}
+          title={card_contents[3].title}
+          caption={card_contents[3].caption}
+        />
+
+        <StoryCard
+          index={0}
+          className="story-border-gradient-left"
+          icon={card_contents[4].icon}
+          title={card_contents[4].title}
+          caption={card_contents[4].caption}
+        />
+
+        <StoryCard
+          index={0}
+          icon={card_contents[5].icon}
+          title={card_contents[5].title}
+          caption={card_contents[5].caption}
+        />
       </div>
     </section>
   );
 }
 
 function StoryCard({
+  index,
+  className,
+  dot,
   icon,
   title,
   caption,
 }: {
+  index: number;
+  className?: string;
+  dot?: boolean;
   icon: string | ReactElement;
   title: string;
   caption: string;
 }) {
   return (
-    <AnimatedBorderWrapper className="w-full h-[304px] rounded-[32px]">
-      <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-stroke flex flex-col pt-12 pb-8 px-10 gap-8 rounded-[32px]">
-        <div className="flex items-center justify-center bg-[#454545] w-12 h-12 rounded-full">
-          {icon}
-        </div>
-        <div className="flex flex-col gap-4">
-          <p className="text-2xl font-semibold">{title}</p>
-          <p className="text-caption text-lg">{caption}</p>
-        </div>
+    <div
+      className={`relative min-w-fit flex flex-col items-center pt-12 pb-8 px-10 gap-4 ${className}`}
+    >
+      <div
+        className={`absolute ${
+          dot ? "flex" : "hidden"
+        } items-center justify-center -bottom-6 -right-6 p-4 rounded-full bg-transparent bg-white`}
+      >
+        <div className="w-3 h-3 bg-caption z-10 rotate-45" />
       </div>
-    </AnimatedBorderWrapper>
+      <div className="flex items-center justify-center bg-[#E8E8E8] w-12 h-12 rounded-full">
+        {icon}
+      </div>
+      <div className="flex flex-col items-center gap-3">
+        <p className="text-2xl font-semibold">{title}</p>
+        <p className="text-caption text-lg text-center">{caption}</p>
+      </div>
+    </div>
   );
 }
+
+// ${
+//         index % 2 ? "" : "story-border-gradient-left"
+//       } ${
+//         index <= 3 && index % 2
+//           ? "story-border-gradient-bottom-right"
+//           : "story-border-gradient-bottom-left"
+//       } ${index >= 4 && "no-border"}
 
 const card_contents: CardProps[] = [
   {
