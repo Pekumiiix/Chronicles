@@ -1,5 +1,4 @@
 import StarIcon from "@/components/icons/star";
-import AnimatedBorderWrapper from "../components/animated-border-wrapper";
 import SectionDescription from "../components/section-description";
 import { ReactElement } from "react";
 import CloseSquare from "@/components/icons/close-square";
@@ -28,7 +27,6 @@ export default function StoriesSection() {
         ))} */}
 
         <StoryCard
-          index={0}
           className="story-border-gradient-left-1 story-border-gradient-bottom-left"
           icon={card_contents[0].icon}
           title={card_contents[0].title}
@@ -37,7 +35,6 @@ export default function StoriesSection() {
         />
 
         <StoryCard
-          index={0}
           className="story-border-gradient-bottom-right"
           icon={card_contents[1].icon}
           title={card_contents[1].title}
@@ -45,7 +42,6 @@ export default function StoriesSection() {
         />
 
         <StoryCard
-          index={0}
           className="border-r border-[#B7B4B4] story-border-gradient-bottom-left"
           icon={card_contents[2].icon}
           title={card_contents[2].title}
@@ -54,7 +50,6 @@ export default function StoriesSection() {
         />
 
         <StoryCard
-          index={0}
           className="story-border-gradient-bottom-right"
           icon={card_contents[3].icon}
           title={card_contents[3].title}
@@ -62,7 +57,6 @@ export default function StoriesSection() {
         />
 
         <StoryCard
-          index={0}
           className="story-border-gradient-left-2"
           icon={card_contents[4].icon}
           title={card_contents[4].title}
@@ -70,7 +64,6 @@ export default function StoriesSection() {
         />
 
         <StoryCard
-          index={0}
           icon={card_contents[5].icon}
           title={card_contents[5].title}
           caption={card_contents[5].caption}
@@ -81,14 +74,12 @@ export default function StoriesSection() {
 }
 
 function StoryCard({
-  index,
   className,
   dot,
   icon,
   title,
   caption,
 }: {
-  index: number;
   className?: string;
   dot?: boolean;
   icon: string | ReactElement;
