@@ -36,7 +36,7 @@ export default function Discover() {
         </div>
       </div>
 
-      <div className="flexnpm gap-6 whitespace-nowrap">
+      <div className="flex gap-6 whitespace-nowrap justify-end">
         <div className="flex items-center gap-6 animate-slideToRight">
           {bottom_card_details.map((item: CardProp, index: number) => (
             <NFTCards

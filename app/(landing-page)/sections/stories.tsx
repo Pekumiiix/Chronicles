@@ -29,7 +29,7 @@ export default function StoriesSection() {
 
         <StoryCard
           index={0}
-          className="story-border-gradient-left story-border-gradient-bottom-left"
+          className="story-border-gradient-left-1 story-border-gradient-bottom-left"
           icon={card_contents[0].icon}
           title={card_contents[0].title}
           caption={card_contents[0].caption}
@@ -46,7 +46,7 @@ export default function StoriesSection() {
 
         <StoryCard
           index={0}
-          className="story-border-gradient-left story-border-gradient-bottom-left"
+          className="border-r border-[#B7B4B4] story-border-gradient-bottom-left"
           icon={card_contents[2].icon}
           title={card_contents[2].title}
           caption={card_contents[2].caption}
@@ -63,7 +63,7 @@ export default function StoriesSection() {
 
         <StoryCard
           index={0}
-          className="story-border-gradient-left"
+          className="story-border-gradient-left-2"
           icon={card_contents[4].icon}
           title={card_contents[4].title}
           caption={card_contents[4].caption}
