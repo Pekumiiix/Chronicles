@@ -10,7 +10,7 @@ export default function Header() {
           <p className="text-foreground font-semibold">Chronicles</p>
         </div>
 
-        <Button asChild variant={`black`}>
+        <Button asChild variant={`blue`}>
           <Link href={`/`}>SIGN IN</Link>
         </Button>
       </nav>

@@ -64,10 +64,9 @@ export default function JoinUs() {
                         className="text-xs font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
                       />
                       <Button
-                        variant={`black`}
+                        variant={`blue`}
                         type="submit"
-                        className="rounded-[24px] px-5 bg-[#070708]"
-                        size={`black`}
+                        className="rounded-[24px] px-5 h-full"
                       >
                         Sign Up
                       </Button>
@@ -91,7 +90,7 @@ export default function JoinUs() {
             <Link
               href={item.href}
               key={index}
-              className="p-3 rounded-xl bg-stroke translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300"
+              className={`p-3 ${item.bg} rounded-xl translate-y-0 scale-100 shadow-none hover:translate-y-[-5px] hover:scale-105 hover:shadow-md transition-all duration-300`}
             >
               {item.icon}
             </Link>
@@ -103,14 +102,35 @@ export default function JoinUs() {
 }
 
 const community_links: LinkProps[] = [
-  { href: "/", icon: <DiscordIcon className="w-8 h-8 fill-caption" /> },
-  { href: "/", icon: <Twitter size="32px" color="#757575" /> },
-  { href: "/", icon: <Youtube size="32px" color="#757575" /> },
-  { href: "/", icon: <Instagram size="32px" color="#757575" /> },
-  { href: "/", icon: <FacebookIcon className="w-8 h-8 fill-caption" /> },
+  {
+    href: "/",
+    icon: <DiscordIcon className="w-8 h-8 fill-white" />,
+    bg: "bg-[#5865F2]",
+  },
+  {
+    href: "/",
+    icon: <Twitter size="32px" fill="#ffffff" color="#ffffff" />,
+    bg: "bg-[#5865F2]",
+  },
+  {
+    href: "/",
+    icon: <Youtube size="32px" fill="#ffffff" color="#FF0000" />,
+    bg: "bg-[#FF0000]",
+  },
+  {
+    href: "/",
+    icon: <Instagram size="32px" fill="white" color="#757575" />,
+    bg: "bg-custom-conic",
+  },
+  {
+    href: "/",
+    icon: <FacebookIcon className="w-8 h-8 fill-white" />,
+    bg: "bg-[#3D5A98]",
+  },
 ];
 
 interface LinkProps {
   href: string;
   icon: ReactElement;
+  bg: string;
 }

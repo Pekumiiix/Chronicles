@@ -2,7 +2,7 @@ export default function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 26 26"
-      fill="none"
+      fill=""
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

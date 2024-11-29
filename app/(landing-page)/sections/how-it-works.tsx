@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import AnimatedBorderWrapper from "../components/animated-border-wrapper";
-import { LogInIcon, UploadIcon, BadgeCheck } from "lucide-react";
+import { BadgeCheck, UserCircle } from "lucide-react";
+import CloudCheckIcon from "@/components/icons/cloud-check";
 
 export default function HowItWorks() {
   return (
@@ -37,8 +38,10 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
         } px-16 pb-16 w-[555px]`}
       >
         <AnimatedBorderWrapper>
-          <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-stroke rounded-xl flex items-center justify-center">
-            {icon}
+          <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
+            <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
+              <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+            </div>
           </div>
         </AnimatedBorderWrapper>
       </div>
@@ -75,19 +78,19 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
 
 const steps: StepsProp[] = [
   {
-    icon: <LogInIcon size={`32px`} color="#080808" />,
+    icon: <UserCircle size={`20px`} color="#757575" />,
     title: "Sign Up",
     caption:
       "Create your account and setup your wallet to become part of a global network dedicated to preserving heritage.",
   },
   {
-    icon: <UploadIcon size={`32px`} color="#080808" />,
+    icon: <CloudCheckIcon className="w-5 h-5 fill-[#757575]" />,
     title: "Upload & Tokenize",
     caption:
       "Record and upload stories as video or audio, which are securely minted as NFTs for preservation.",
   },
   {
-    icon: <BadgeCheck size={`32px`} color="#080808" />,
+    icon: <BadgeCheck size={`20px`} fill="#757575" color="#FFFDFC" />,
     title: "Validate & Earn",
     caption:
       "Contribute to authenticating content to earn rewards, or sell your tokenized collections to interested buyers.",

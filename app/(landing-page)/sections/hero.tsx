@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import CardStack from "../components/card-stack";
 
 export default function Hero() {
   return (
-    <section className="container py-8 px-32 flex flex-col gap-14">
+    <section className="relative container py-8 px-32 flex flex-col justify-end gap-14 h-[550px]">
+      <CardStack />
+
       <div className="flex flex-col items-end gap-8">
         <div className="w-full flex flex-col text-7xl font-black leading-[80px]">
           <p className="text-left">Your Stories Today,</p>
@@ -26,7 +29,7 @@ export default function Hero() {
         />
 
         <div className="flex items-center gap-[11px]">
-          <Button variant={`black`}>Begin Your Legacy Journey</Button>
+          <Button variant={`blue`}>Begin Your Legacy Journey</Button>
 
           <Button
             variant={`ghost`}

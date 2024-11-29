@@ -1,9 +1,11 @@
-import StarIcon from "@/components/icons/star";
 import SectionDescription from "../components/section-description";
 import { ReactElement } from "react";
-import CloseSquare from "@/components/icons/close-square";
-import GlobalSearch from "@/components/icons/global-search";
-import Lock from "@/components/icons/lock";
+import { CircleDollarSign } from "lucide-react";
+import DatabaseIcon from "@/components/icons/database";
+import AccessibilityIcon from "@/components/icons/accessibility";
+import GroupUserIcon from "@/components/icons/group-user";
+import Books from "@/components/icons/books";
+import SquareUserIcon from "@/components/icons/square-user";
 
 export default function StoriesSection() {
   return (
@@ -118,37 +120,37 @@ function StoryCard({
 
 const card_contents: CardProps[] = [
   {
-    icon: <StarIcon />,
+    icon: <DatabaseIcon className="fill-[#757575] w-6 h-6" />,
     title: "Preserve Cultural Heritage",
     caption:
       "Your culture deserves to endure. Safeguard Africa’s stories and wisdom with blockchain, keeping them alive for generations.",
   },
   {
-    icon: <CloseSquare />,
+    icon: <AccessibilityIcon className="fill-[#757575] w-6 h-6" />,
     title: "Empower Communities",
     caption:
       "Your stories, your rewards. Earn tokens while preserving cultural treasures and strengthening community bonds.",
   },
   {
-    icon: <GlobalSearch />,
+    icon: <GroupUserIcon className="fill-[#757575] w-6 h-6" />,
     title: "Global Accessibility",
     caption:
       "Your voice, heard worldwide. AI transcription and translation make Africa’s heritage accessible in any language, anywhere.",
   },
   {
-    icon: <Lock />,
+    icon: <Books className="fill-[#757575] w-6 h-6" />,
     title: "Support Education & Research",
     caption:
       "Your heritage is knowledge. Provide verified data for schools and researchers, bridging tradition and modern education.",
   },
   {
-    icon: <StarIcon />,
+    icon: <SquareUserIcon className="fill-[#757575] w-6 h-6" />,
     title: "Drive Economic Opportunities",
     caption:
       "Your legacy, your wealth. Monetize cultural treasures responsibly, creating new opportunities in tourism and beyond.",
   },
   {
-    icon: <CloseSquare />,
+    icon: <CircleDollarSign size={`24px`} fill="#757575" color="#E8E8E8" />,
     title: "Foster Identity and Belonging",
     caption:
       "Your roots, your pride. Celebrate and share the stories that define who you are, inspiring connections across generations and cultures.",

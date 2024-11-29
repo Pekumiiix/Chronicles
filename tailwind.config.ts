@@ -12,8 +12,13 @@ export default {
       fontSize: {
         title: "72px",
       },
+      backgroundImage: {
+        "custom-conic":
+          "conic-gradient(from 183.43deg at 41.07% 50%, #FFBF50 -2.64deg, #5856CA 140.99deg, #C837AB 221.11deg, #DF437D 271.16deg, #FFBF50 357.36deg, #5856CA 500.99deg)",
+      },
       boxShadow: {
         "inset-sm": "inset 0px 0px 1px 0px #00000066",
+        "stack-shadow": "-8px 4px 20px 0px #0000000D",
       },
       colors: {
         background: "hsl(var(--background))",
