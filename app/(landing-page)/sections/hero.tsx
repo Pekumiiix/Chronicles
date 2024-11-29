@@ -5,10 +5,10 @@ import CardStack from "../components/card-stack";
 
 export default function Hero() {
   return (
-    <section className="relative container py-8 px-32 flex flex-col justify-end gap-14 h-[550px]">
+    <section className="relative container pt-0 pb-8 px-32 flex flex-col justify-end gap-14 h-fit">
       <CardStack />
 
-      <div className="flex flex-col items-end gap-8">
+      <div className="flex flex-col items-end gap-8 mt-20 mb-14">
         <div className="w-full flex flex-col text-7xl font-black leading-[80px]">
           <p className="text-left">Your Stories Today,</p>
           <p className="text-right">Legacy For Generation</p>
