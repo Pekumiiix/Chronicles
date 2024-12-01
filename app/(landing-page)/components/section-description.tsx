@@ -6,8 +6,12 @@ export default function SectionDescription({
 }: IProps) {
   return (
     <div className="flex flex-col gap-2 items-center">
-      <p className={`text-foreground font-black ${titleClass}`}>{title}</p>
-      <p className={`text-center text-caption ${captionClass}`}>{caption}</p>
+      <p className={`text-foreground font-black text-[32px] ${titleClass}`}>
+        {title}
+      </p>
+      <p className={`text-center text-caption text-sm ${captionClass}`}>
+        {caption}
+      </p>
     </div>
   );
 }

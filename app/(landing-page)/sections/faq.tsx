@@ -8,13 +8,13 @@ import SectionDescription from "../components/section-description";
 
 export default function FaqSection() {
   return (
-    <section className="container flex flex-col gap-[72px] py-[10px] px-[352px]">
+    <section className="container flex flex-col gap-[72px] py-[10px] px-5 md:px-10 lg:px-[352px]">
       <SectionDescription
         title="FAQs"
         caption="Everything You Need to Know About Preserving Stories and Earning
           Rewards with Chronicles"
-        titleClass="text-title leading-[79px]"
-        captionClass="text-lg w-full"
+        titleClass="md:text-title md:leading-[79px]"
+        captionClass="md:text-lg w-full"
       />
 
       <Accordion type="single" collapsible className="w-full">

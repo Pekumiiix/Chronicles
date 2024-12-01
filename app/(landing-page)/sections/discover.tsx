@@ -7,8 +7,8 @@ export default function Discover() {
       <SectionDescription
         title="Discover Collections"
         caption="Discover unique pieces of African heritage preserved as digital collectibles"
-        titleClass="text-[56px]"
-        captionClass="text-lg max-w-[776px]"
+        titleClass="text-center md:text-left md:text-[56px]"
+        captionClass="md:text-lg max-w-[776px]"
       />
 
       <div className="flex items-center gap-6 whitespace-nowrap">
@@ -78,7 +78,7 @@ function NFTCards({
 }) {
   return (
     <div className="inline-flex flex-col pb-2 relative shadow-inset-sm rounded-2xl">
-      <div className="flex items-center justify-center w-[336px] h-[219px] rounded-[8px] bg-[#E8E8E8]">
+      <div className="flex items-center justify-center w-[240px] md:w-[336px] md:h-[219px] rounded-[8px] bg-[#E8E8E8]">
         <Image
           src={`${image === "" ? "/assets/landing-page/Vector.png" : image}`}
           alt={title}
@@ -87,7 +87,7 @@ function NFTCards({
           className={
             image === ""
               ? "w-4 h-[14px]"
-              : "w-full h-full max-h-full max-w-full rounded-[8px]"
+              : "w-full h-[227px] md:h-full md:max-h-full max-w-full rounded-[8px]"
           }
         />
       </div>
@@ -97,8 +97,8 @@ function NFTCards({
       </p>
 
       <div className="flex flex-col py-3 px-4 gap-1">
-        <p className="font-semibold">{title}</p>
-        <p className="text-caption text-xs">{caption}</p>
+        <p className="text-xs md:text-base font-semibold">{title}</p>
+        <p className="text-caption text-[10px] md:text-xs">{caption}</p>
       </div>
     </div>
   );

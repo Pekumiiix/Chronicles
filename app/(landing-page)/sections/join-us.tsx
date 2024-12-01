@@ -39,16 +39,51 @@ export default function JoinUs() {
   }
 
   return (
-    <section className="container flex flex-col items-center gap-14 py-6 px-32">
+    <section className="max-w-[1536px] min-w-full flex flex-col items-center gap-14 py-[72px] md:py-[96px] px-5 md:px-32 bg-[#000000]">
       <div className="flex flex-col gap-10 max-w-[662px]">
         <SectionDescription
           title="Be Part of a Living Legacy"
           caption="Connect with storytellers, history enthusiasts, and cultural custodians shaping the future of our heritage."
-          titleClass="text-5xl leading-[53px]"
-          captionClass="text-xl w-full"
+          titleClass="md:text-5xl md:leading-[53px] text-center md:text-left text-white"
+          captionClass="md:text-xl w-full text-[#9A9A9A]"
         />
 
-        <Form {...form}>
+        <AnimatedBorderWrapper className="w-full h-[58px] rounded-[27px] p-[1px]">
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="absolute w-full h-full rounded-[27px]"
+            >
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="h-[54px] -mt-1.5 rounded-[27px] p-0">
+                    <FormLabel className="hidden">Email</FormLabel>
+                    <FormControl className="h-[54px] rounded-[27px]">
+                      <div className="flex items-center bg-black p-[3px] rounded-[27px] min-h-full gap-8">
+                        <Input
+                          placeholder="Email address"
+                          {...field}
+                          className="text-xs text-white font-medium placeholder:text-placeholder p-0 pl-5 border-none ring-0 focus-visible:ring-0 shadow-none"
+                        />
+                        <Button
+                          type="submit"
+                          className="rounded-[24px] px-5 h-full bg-[#A10145]"
+                        >
+                          Sign Up
+                        </Button>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </form>
+          </Form>
+        </AnimatedBorderWrapper>
+
+        {/* <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
             <FormField
               control={form.control}
@@ -61,12 +96,11 @@ export default function JoinUs() {
                       <Input
                         placeholder="Email address"
                         {...field}
-                        className="text-xs font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
+                        className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
                       />
                       <Button
-                        variant={`blue`}
                         type="submit"
-                        className="rounded-[24px] px-5 h-full"
+                        className="rounded-[24px] px-5 h-full bg-[#A10145]"
                       >
                         Sign Up
                       </Button>
@@ -77,11 +111,11 @@ export default function JoinUs() {
               )}
             />
           </form>
-        </Form>
+        </Form> */}
       </div>
 
       <div className="flex flex-col items-center gap-5">
-        <p className="text-foreground font-semibold">
+        <p className="text-white font-semibold">
           Join our community and stay in the loop
         </p>
 
@@ -98,6 +132,24 @@ export default function JoinUs() {
         </div>
       </div>
     </section>
+  );
+}
+
+function AnimatedBorderWrapper({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`card-wrapper-two ${
+        className ? className : "w-[196px] h-[148px] rounded-xl"
+      }`}
+    >
+      {children}
+    </div>
   );
 }
 

@@ -12,9 +12,19 @@ export default {
       fontSize: {
         title: "72px",
       },
+      backgroundColor: {
+        "bottom-right":
+          "linear-gradient(270deg,#fdfbfa 5%,#d9d9d9 52.5%,#95a9d6 95%)",
+      },
       backgroundImage: {
         "custom-conic":
           "conic-gradient(from 183.43deg at 41.07% 50%, #FFBF50 -2.64deg, #5856CA 140.99deg, #C837AB 221.11deg, #DF437D 271.16deg, #FFBF50 357.36deg, #5856CA 500.99deg)",
+        "bottom-right":
+          "linear-gradient(270deg,#fdfbfa 5%,#d9d9d9 52.5%,#95a9d6 95%)",
+        "bottom-left":
+          "linear-gradient(270deg,#95a9d6 2.62%,#d9d9d9 48%,#fdfbfa 100%)",
+        "dot-gradient":
+          "linear-gradient(270deg,#223B73 9.78%,#A10145 37.46%,#621E5C 66.94%)",
       },
       boxShadow: {
         "inset-sm": "inset 0px 0px 1px 0px #00000066",

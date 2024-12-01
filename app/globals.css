@@ -73,28 +73,29 @@
   }
 }
 
-.gradient-border-left {
-  border-left: 2px solid transparent; /* Required as a fallback */
-  border-image-source: linear-gradient(
-    180deg,
-    #bababa 8%,
-    #a41045 66%,
-    #223b73 90.5%
-  );
-  border-image-slice: 2;
-}
-
 @layer utilities {
   .card-wrapper {
     @apply relative bg-stroke overflow-hidden flex items-center justify-center;
   }
 
   .card-wrapper::before {
-    background: conic-gradient(#c3c3c3 5%, #d9d9d9 48%, #fdfbfa 100%);
+    /* background: conic-gradient(#c3c3c3 5%, #d9d9d9 48%, #fdfbfa 100%); */
 
-    /* background: conic-gradient(#bababa 0%, #a41045 66%, #223b73 90%); */
+    background: conic-gradient(#bababa 0%, #a41045 66%, #223b73 90%);
 
     @apply absolute h-[200%] w-[200%] -left-[50%] -top-[50%] content-[''] animate-border-spin;
+  }
+
+  .card-wrapper-two {
+    @apply relative bg-stroke overflow-hidden flex items-center justify-center;
+  }
+
+  .card-wrapper-two::before {
+    /* background: conic-gradient(#c3c3c3 5%, #d9d9d9 48%, #fdfbfa 100%); */
+
+    background: conic-gradient(#223b73 9.78%, #a10145 37.46%, #621e5c 66.94%);
+
+    @apply absolute h-[2000%] w-[2000%] -left-[950%] -top-[950%] content-[''] animate-border-spin;
   }
 
   .story-border-gradient-bottom-left {
@@ -141,25 +142,38 @@
   }
 }
 
-.gradient-border-right {
-  border-right: 2px solid transparent; /* Required as a fallback */
-  border-image-source: linear-gradient(
-    180deg,
-    #223b73 100%,
-    #bababa 100%,
-    #a41045 100%
-  );
-  border-image-slice: 2;
-}
+@media screen and (min-width: 1024px) {
+  .gradient-border-right {
+    border-right: 2px solid transparent; /* Required as a fallback */
+    border-image-source: linear-gradient(
+      180deg,
+      #223b73 100%,
+      #bababa 100%,
+      #a41045 100%
+    );
+    border-image-slice: 2;
+  }
 
-.gradient-border-left-2 {
-  border-left: 2px solid transparent; /* Required as a fallback */
-  border-image-source: linear-gradient(
-    180deg,
-    #a41045 100%,
-    #223b73 100%,
-    #1f1f1f 100%,
-    #141414 100%
-  );
-  border-image-slice: 2;
+  .gradient-border-left {
+    border-left: 2px solid transparent; /* Required as a fallback */
+    border-image-source: linear-gradient(
+      180deg,
+      #bababa 8%,
+      #a41045 66%,
+      #223b73 90.5%
+    );
+    border-image-slice: 2;
+  }
+
+  .gradient-border-left-2 {
+    border-left: 2px solid transparent; /* Required as a fallback */
+    border-image-source: linear-gradient(
+      180deg,
+      #a41045 100%,
+      #223b73 100%,
+      #1f1f1f 100%,
+      #141414 100%
+    );
+    border-image-slice: 2;
+  }
 }

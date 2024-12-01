@@ -6,18 +6,19 @@ import AccessibilityIcon from "@/components/icons/accessibility";
 import GroupUserIcon from "@/components/icons/group-user";
 import Books from "@/components/icons/books";
 import SquareUserIcon from "@/components/icons/square-user";
+import BorderBottomGradient from "../components/border-bottom-gradient";
 
 export default function StoriesSection() {
   return (
-    <section className="container flex flex-col gap-[72px] py-10 px-32">
+    <section className="container flex flex-col gap-[72px] py-10 px-5 lg:px-32">
       <SectionDescription
         title="Why Your Stories Matter"
         caption="Preserve, share, and celebrate the cultural treasures that define who you are, ensuring they inspire future generations for years to come."
-        titleClass="text-[56px]"
-        captionClass="text-lg max-w-[776px]"
+        titleClass="md:text-[56px] text-center text-left"
+        captionClass="md:text-lg max-w-[776px]"
       />
 
-      <div className="w-full grid grid-cols-2 gap-y-5 gap-x-5 h-fit">
+      <div className="w-full grid md:grid-cols-2 gap-y-5 gap-x-5 h-fit">
         {/* {card_contents.map((item: CardProps, index: number) => (
           <StoryCard
             key={index}
@@ -29,41 +30,51 @@ export default function StoriesSection() {
         ))} */}
 
         <StoryCard
-          className="story-border-gradient-left-1 story-border-gradient-bottom-left"
+          className="md:story-border-gradient-left-1 md:story-border-gradient-bottom-left"
           icon={card_contents[0].icon}
           title={card_contents[0].title}
           caption={card_contents[0].caption}
           dot
         />
 
+        <BorderBottomGradient />
+
         <StoryCard
-          className="story-border-gradient-bottom-right"
+          className="md:story-border-gradient-bottom-right"
           icon={card_contents[1].icon}
           title={card_contents[1].title}
           caption={card_contents[1].caption}
         />
 
+        <BorderBottomGradient />
+
         <StoryCard
-          className="border-r border-[#B7B4B4] story-border-gradient-bottom-left"
+          className="md:border-r border-[#B7B4B4] md:story-border-gradient-bottom-left"
           icon={card_contents[2].icon}
           title={card_contents[2].title}
           caption={card_contents[2].caption}
           dot
         />
 
+        <BorderBottomGradient />
+
         <StoryCard
-          className="story-border-gradient-bottom-right"
+          className="md:story-border-gradient-bottom-right"
           icon={card_contents[3].icon}
           title={card_contents[3].title}
           caption={card_contents[3].caption}
         />
 
+        <BorderBottomGradient />
+
         <StoryCard
-          className="story-border-gradient-left-2"
+          className="md:story-border-gradient-left-2"
           icon={card_contents[4].icon}
           title={card_contents[4].title}
           caption={card_contents[4].caption}
         />
+
+        <BorderBottomGradient />
 
         <StoryCard
           icon={card_contents[5].icon}
@@ -94,17 +105,17 @@ function StoryCard({
     >
       <div
         className={`absolute ${
-          dot ? "flex" : "hidden"
+          dot ? "hidden md:flex" : "hidden"
         } items-center justify-center -bottom-6 -right-6 p-4 rounded-full bg-transparent bg-white`}
       >
-        <div className="w-3 h-3 bg-caption z-10 rotate-45" />
+        <div className="w-3 h-3 bg-dot-gradient z-10 rotate-45" />
       </div>
       <div className="flex items-center justify-center bg-[#E8E8E8] w-12 h-12 rounded-full">
         {icon}
       </div>
       <div className="flex flex-col items-center gap-3">
-        <p className="text-2xl font-semibold">{title}</p>
-        <p className="text-caption text-lg text-center">{caption}</p>
+        <p className="text-lg md:text-2xl font-semibold text-center">{title}</p>
+        <p className="text-caption text-sm md:text-lg text-center">{caption}</p>
       </div>
     </div>
   );
