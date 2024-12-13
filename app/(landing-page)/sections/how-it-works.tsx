@@ -42,11 +42,11 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
       } lg:max-w-[1110px]`}
     >
       <div
-        className={`flex ${
+        className={`hidden md:flex ${
           number % 2 ? "justify-end" : "justify-start"
         } lg:px-16 lg:pb-16 w-fit lg:w-[555px]`}
       >
-        <AnimatedBorderWrapper className="hidden md:flex">
+        <AnimatedBorderWrapper>
           <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
             <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
               <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
@@ -55,7 +55,7 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
         </AnimatedBorderWrapper>
       </div>
 
-      <AnimatedBorderWrapper className="w-[100px] h-[75px] rounded-full">
+      <AnimatedBorderWrapper className="flex md:hidden w-[100px] h-[75px] rounded-full">
         <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#FFFDFC] rounded-full flex items-center justify-center">
           <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
         </div>
