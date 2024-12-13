@@ -14,7 +14,7 @@ export default function Hero() {
         alt="Sparkle"
         width={24}
         height={24}
-        className="absolute bottom-[250px] right-10 md:-top-[80px] md:right-[500px] w-[11px] h-[11px] md:w-12 md:h-12"
+        className="absolute bottom-[250px] right-10 md:-top-[80px] md:right-[500px] w-[11px] h-[11px] md:w-6 md:h-6"
       />
 
       <Image
@@ -22,7 +22,7 @@ export default function Hero() {
         alt="Sparkle"
         width={24}
         height={24}
-        className="absolute left-10 bottom-20 md:top-[100px] md:right-[100px] w-[11px] h-[11px] md:w-12 md:h-12"
+        className="absolute left-10 bottom-20 md:top-[100px] md:left-[90%] w-[11px] h-[11px] md:w-6 md:h-6"
       />
 
       <div className="flex flex-col gap-2.5 items-center">
