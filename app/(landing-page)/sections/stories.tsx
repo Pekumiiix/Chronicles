@@ -1,12 +1,12 @@
 import SectionDescription from "../components/section-description";
 import { ReactElement } from "react";
-import { CircleDollarSign } from "lucide-react";
 import DatabaseIcon from "@/components/icons/database";
 import AccessibilityIcon from "@/components/icons/accessibility";
 import GroupUserIcon from "@/components/icons/group-user";
 import Books from "@/components/icons/books";
 import SquareUserIcon from "@/components/icons/square-user";
 import BorderBottomGradient from "../components/border-bottom-gradient";
+import CircleDollarSign from "@/components/icons/circle-dollar-sign";
 
 export default function StoriesSection() {
   return (
@@ -19,16 +19,6 @@ export default function StoriesSection() {
       />
 
       <div className="w-full grid md:grid-cols-2 gap-y-5 gap-x-5 h-fit">
-        {/* {card_contents.map((item: CardProps, index: number) => (
-          <StoryCard
-            key={index}
-            index={index}
-            icon={item.icon}
-            title={item.title}
-            caption={item.caption}
-          />
-        ))} */}
-
         <StoryCard
           className="md:story-border-gradient-left-1 md:story-border-gradient-bottom-left"
           icon={card_contents[0].icon}
@@ -101,7 +91,7 @@ function StoryCard({
 }) {
   return (
     <div
-      className={`relative min-w-fit flex flex-col items-center pt-12 pb-8 px-10 gap-4 ${className}`}
+      className={`relative min-w-fit flex flex-col items-center pt-12 pb-8 px-0 md:px-10 gap-4 ${className}`}
     >
       <div
         className={`absolute ${
@@ -121,47 +111,39 @@ function StoryCard({
   );
 }
 
-// ${
-//         index % 2 ? "" : "story-border-gradient-left"
-//       } ${
-//         index <= 3 && index % 2
-//           ? "story-border-gradient-bottom-right"
-//           : "story-border-gradient-bottom-left"
-//       } ${index >= 4 && "no-border"}
-
 const card_contents: CardProps[] = [
   {
-    icon: <DatabaseIcon className="fill-[#757575] w-6 h-6" />,
+    icon: <DatabaseIcon className="w-6 h-6" />,
     title: "Preserve Cultural Heritage",
     caption:
       "Your culture deserves to endure. Safeguard Africa’s stories and wisdom with blockchain, keeping them alive for generations.",
   },
   {
-    icon: <AccessibilityIcon className="fill-[#757575] w-6 h-6" />,
+    icon: <AccessibilityIcon className="w-6 h-6" />,
     title: "Empower Communities",
     caption:
       "Your stories, your rewards. Earn tokens while preserving cultural treasures and strengthening community bonds.",
   },
   {
-    icon: <GroupUserIcon className="fill-[#757575] w-6 h-6" />,
+    icon: <GroupUserIcon className="w-6 h-6" />,
     title: "Global Accessibility",
     caption:
       "Your voice, heard worldwide. AI transcription and translation make Africa’s heritage accessible in any language, anywhere.",
   },
   {
-    icon: <Books className="fill-[#757575] w-6 h-6" />,
+    icon: <Books className="w-6 h-6" />,
     title: "Support Education & Research",
     caption:
       "Your heritage is knowledge. Provide verified data for schools and researchers, bridging tradition and modern education.",
   },
   {
-    icon: <SquareUserIcon className="fill-[#757575] w-6 h-6" />,
+    icon: <SquareUserIcon className="w-6 h-6" />,
     title: "Drive Economic Opportunities",
     caption:
       "Your legacy, your wealth. Monetize cultural treasures responsibly, creating new opportunities in tourism and beyond.",
   },
   {
-    icon: <CircleDollarSign size={`24px`} fill="#757575" color="#E8E8E8" />,
+    icon: <CircleDollarSign className="w-6 h-6" />,
     title: "Foster Identity and Belonging",
     caption:
       "Your roots, your pride. Celebrate and share the stories that define who you are, inspiring connections across generations and cultures.",

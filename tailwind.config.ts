@@ -25,6 +25,7 @@ export default {
           "linear-gradient(270deg,#95a9d6 2.62%,#d9d9d9 48%,#fdfbfa 100%)",
         "dot-gradient":
           "linear-gradient(270deg,#223B73 9.78%,#A10145 37.46%,#621E5C 66.94%)",
+        "text-gradient": "linear-gradient(to right, #ff0000, #0000ff)",
       },
       boxShadow: {
         "inset-sm": "inset 0px 0px 1px 0px #00000066",

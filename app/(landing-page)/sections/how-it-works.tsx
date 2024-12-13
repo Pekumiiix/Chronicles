@@ -7,7 +7,7 @@ import BadgeCheckIcon from "@/components/icons/badge-check";
 
 export default function HowItWorks() {
   return (
-    <section className="container py-16 lg:px-32 flex flex-col gap-[72px] items-center">
+    <section className="container py-16 px-5 lg:px-32 flex flex-col gap-[72px] items-center">
       {/* <p className="text-foregrpund text-[32px] md:text-[56px] leading-[62px] font-extrabold">
         How It Works
       </p> */}
@@ -46,7 +46,7 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
           number % 2 ? "justify-end" : "justify-start"
         } lg:px-16 lg:pb-16 w-fit lg:w-[555px]`}
       >
-        <AnimatedBorderWrapper>
+        <AnimatedBorderWrapper className="hidden md:flex">
           <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
             <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
               <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
@@ -55,8 +55,14 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
         </AnimatedBorderWrapper>
       </div>
 
+      <AnimatedBorderWrapper className="w-[100px] h-[75px] rounded-full">
+        <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#FFFDFC] rounded-full flex items-center justify-center">
+          <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+        </div>
+      </AnimatedBorderWrapper>
+
       <div
-        className={`flex flex-col items-center lg:w-[555px] px-16 lg:pb-16 ${
+        className={`flex flex-col items-center lg:w-[555px] md:px-16 lg:pb-16 ${
           number % 2
             ? "gradient-border-left lg:items-start lg:-ml-1"
             : "gradient-border-right lg:items-end"

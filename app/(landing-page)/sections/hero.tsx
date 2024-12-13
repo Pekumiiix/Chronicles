@@ -2,23 +2,54 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import CardStack from "../components/card-stack";
+import JetIcon from "@/components/icons/jet-icon";
 
 export default function Hero() {
   return (
     <section className="relative container pt-0 pb-8 px-5 lg:px-32 flex flex-col-reverse items-center lg:items-stretch lg:flex-col lg:justify-end gap-14 h-fit">
       <CardStack />
 
-      <div className="flex flex-col lg:gap-14 items-center">
-        <div className="flex flex-col items-center lg:items-end gap-6 lg:gap-8 lg:mt-20 mb-14">
+      <Image
+        src={`/assets/landing-page/Sparkle.png`}
+        alt="Sparkle"
+        width={24}
+        height={24}
+        className="absolute bottom-[250px] right-10 md:-top-[80px] md:right-[500px] w-[11px] h-[11px] md:w-12 md:h-12"
+      />
+
+      <Image
+        src={`/assets/landing-page/Sparkle.png`}
+        alt="Sparkle"
+        width={24}
+        height={24}
+        className="absolute left-10 bottom-20 md:top-[100px] md:right-[100px] w-[11px] h-[11px] md:w-12 md:h-12"
+      />
+
+      <div className="flex flex-col lg:gap-5 items-center">
+        <div className="flex w-full justify-start gap-1">
+          <JetIcon />
+          <p className="text-xs leading-none bg-text-gradient bg-clip-text text-transparent">
+            1,500 CREATORS REWARDED
+          </p>
+        </div>
+        <div className="w-full flex flex-col items-center lg:items-start gap-5 lg:gap-8 mb-14">
           <p className="flex lg:hidden text-left md:text-center text-[40px] leading-[44px] md:text-5xl font-black">
             Your Stories Today, Legacy For Generation
           </p>
           <div className="w-full hidden lg:flex flex-col text-7xl font-black leading-[80px]">
-            <p className="text-left">Your Stories Today,</p>
-            <p className="text-right">Legacy For Generation</p>
+            <p>Your Stories Today,</p>
+            <div className="flex items-center gap-4 mt-2">
+              <Image
+                src={`/assets/landing-page/hero-image.png`}
+                alt="Illustration"
+                width={96}
+                height={56}
+              />
+              <p className="leading-none">Legacy For Generation</p>
+            </div>
           </div>
 
-          <p className="text-sm md:text-lg text-caption text-center lg:text-left max-w-[493px]">
+          <p className="text-sm md:text-lg text-caption lg:text-left max-w-[493px]">
             Transform your cultural memories into digital treasures that future
             generations will cherish through innovative digital ownership
           </p>
@@ -30,15 +61,20 @@ export default function Hero() {
             alt="Border"
             width={50}
             height={20}
-            className="mb-3 md:mb-0"
+            className="mb-3 md:mb-0 lg:hidden"
           />
 
           <div className="flex flex-col-reverse md:flex-row items-center gap-[11px]">
-            <Button variant={`blue`}>Begin Your Legacy Journey</Button>
+            <Button
+              variant={`blue`}
+              className="py-3 px-6 h-10 lg:h-12 font-semibold"
+            >
+              Begin Your Legacy Journey
+            </Button>
 
             <Button
               variant={`ghost`}
-              className="py-3 px-6 text-caption font-semibold flex items-center gap-2 h-10"
+              className="py-3 px-6 text-caption font-semibold flex items-center gap-2 h-12"
             >
               Explore Stories
               <ArrowUpRight color="#757575" size={20} />

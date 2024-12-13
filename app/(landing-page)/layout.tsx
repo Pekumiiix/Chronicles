@@ -14,7 +14,7 @@ export default function LandingPageLayout({
 }>) {
   return (
     <body
-      className={`${HK_Nova.variable} flex flex-col items-center gap-[105px]`}
+      className={`${HK_Nova.variable} flex flex-col items-center gap-10 md:gap-[105px]`}
     >
       <Header />
 

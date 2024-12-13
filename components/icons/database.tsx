@@ -1,6 +1,8 @@
 export default function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      width="18"
+      height="20"
       viewBox="0 0 18 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -8,8 +10,22 @@ export default function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
     >
       <path
         d="M9 0.25C3.95344 0.25 0 2.55625 0 5.5V14.5C0 17.4438 3.95344 19.75 9 19.75C14.0466 19.75 18 17.4438 18 14.5V5.5C18 2.55625 14.0466 0.25 9 0.25ZM16.5 10C16.5 10.9019 15.7612 11.8216 14.4741 12.5238C13.0247 13.3141 11.0803 13.75 9 13.75C6.91969 13.75 4.97531 13.3141 3.52594 12.5238C2.23875 11.8216 1.5 10.9019 1.5 10V8.44C3.09938 9.84625 5.83406 10.75 9 10.75C12.1659 10.75 14.9006 9.8425 16.5 8.44V10ZM14.4741 17.0238C13.0247 17.8141 11.0803 18.25 9 18.25C6.91969 18.25 4.97531 17.8141 3.52594 17.0238C2.23875 16.3216 1.5 15.4019 1.5 14.5V12.94C3.09938 14.3463 5.83406 15.25 9 15.25C12.1659 15.25 14.9006 14.3425 16.5 12.94V14.5C16.5 15.4019 15.7612 16.3216 14.4741 17.0238Z"
-        fill=""
+        fill="url(#paint0_linear_440_75)"
       />
+      <defs>
+        <linearGradient
+          id="paint0_linear_440_75"
+          x1="18"
+          y1="10"
+          x2="0"
+          y2="10"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.0977911" stopColor="#223B73" />
+          <stop offset="0.374628" stopColor="#A10145" />
+          <stop offset="0.669442" stopColor="#621E5C" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }
