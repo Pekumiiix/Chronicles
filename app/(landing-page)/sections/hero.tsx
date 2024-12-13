@@ -59,7 +59,7 @@ export default function Hero() {
           <Image
             src={`/assets/landing-page/Line-2.png`}
             alt="Border"
-            width={25}
+            width={12}
             height={20}
             className="mb-3 md:mb-0 lg:hidden"
           />
@@ -86,7 +86,7 @@ export default function Hero() {
             alt="Border"
             width={50}
             height={20}
-            className="w-[25px] md:w-[50px] mb-3 md:mb-0"
+            className="w-3 md:w-[50px] mb-3 md:mb-0"
           />
         </div>
       </div>
