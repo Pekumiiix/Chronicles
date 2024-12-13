@@ -25,14 +25,14 @@ export default function Hero() {
         className="absolute left-10 bottom-20 md:top-[100px] md:right-[100px] w-[11px] h-[11px] md:w-12 md:h-12"
       />
 
-      <div className="flex flex-col lg:gap-5 items-center">
+      <div className="flex flex-col gap-2.5 items-center">
         <div className="flex w-full justify-start gap-1">
           <JetIcon />
           <p className="text-xs leading-none bg-text-gradient bg-clip-text text-transparent">
             1,500 CREATORS REWARDED
           </p>
         </div>
-        <div className="w-full flex flex-col items-center lg:items-start gap-5 lg:gap-8 mb-14">
+        <div className="w-full flex flex-col items-center lg:items-start gap-4 lg:gap-8 md:mb-14">
           <p className="flex lg:hidden text-left md:text-center text-[40px] leading-[44px] md:text-5xl font-black">
             Your Stories Today, Legacy For Generation
           </p>
@@ -59,7 +59,7 @@ export default function Hero() {
           <Image
             src={`/assets/landing-page/Line-2.png`}
             alt="Border"
-            width={50}
+            width={25}
             height={20}
             className="mb-3 md:mb-0 lg:hidden"
           />
@@ -86,7 +86,7 @@ export default function Hero() {
             alt="Border"
             width={50}
             height={20}
-            className="mb-3 md:mb-0"
+            className="w-[25px] md:w-[50px] mb-3 md:mb-0"
           />
         </div>
       </div>
