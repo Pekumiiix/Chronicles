@@ -5,6 +5,7 @@ import SectionDescription from "../components/section-description";
 import RoundUserIcon from "@/components/icons/round-user";
 import BadgeCheckIcon from "@/components/icons/badge-check";
 import BorderBottomGradient from "../components/border-bottom-gradient";
+import Image from "next/image";
 
 export default function HowItWorks() {
   return (
@@ -19,6 +20,7 @@ export default function HowItWorks() {
       <div className="flex flex-col gap-12 lg:gap-0 items-center py-[9px] max-w-full lg:max-w-[1110px]">
         <Steps
           icon={steps[0].icon}
+          image={steps[0].image}
           number={1}
           title={steps[0].title}
           caption={steps[0].caption}
@@ -28,6 +30,7 @@ export default function HowItWorks() {
 
         <Steps
           icon={steps[1].icon}
+          image={steps[1].image}
           number={2}
           title={steps[1].title}
           caption={steps[1].caption}
@@ -37,6 +40,7 @@ export default function HowItWorks() {
 
         <Steps
           icon={steps[2].icon}
+          image={steps[2].image}
           number={3}
           title={steps[2].title}
           caption={steps[2].caption}
@@ -46,7 +50,7 @@ export default function HowItWorks() {
   );
 }
 
-function Steps({ icon, number, title, caption }: StepComponentProp) {
+function Steps({ icon, image, number, title, caption }: StepComponentProp) {
   return (
     <div
       className={`flex gap-5 lg:gap-0 items-center lg:items-stretch ${
@@ -61,7 +65,7 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
         <AnimatedBorderWrapper>
           <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
             <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
-              <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+              <div className="flex p-2 rounded-full bg-[#E8E8E8]">{image}</div>
             </div>
           </div>
         </AnimatedBorderWrapper>
@@ -69,7 +73,9 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
 
       <AnimatedBorderWrapper className="flex md:hidden w-[100px] h-[75px] rounded-full">
         <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#FFFDFC] rounded-full flex items-center justify-center">
-          <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+          <div className="flex p-2 rounded-full bg-[#E8E8E8]">
+            <RoundUserIcon className="w-5 h-5" />
+          </div>
         </div>
       </AnimatedBorderWrapper>
 
@@ -108,18 +114,42 @@ function Steps({ icon, number, title, caption }: StepComponentProp) {
 const steps: StepsProp[] = [
   {
     icon: <RoundUserIcon className="w-5 h-5" />,
+    image: (
+      <Image
+        src={`/assets/landing-page/circle-user.png`}
+        alt="Circle User"
+        width={20}
+        height={20}
+      />
+    ),
     title: "Sign Up",
     caption:
       "Create your account and setup your wallet to become part of a global network dedicated to preserving heritage.",
   },
   {
     icon: <CloudCheckIcon className="w-5 h-5" />,
+    image: (
+      <Image
+        src={`/assets/landing-page/cloud-check.png`}
+        alt="Cloud Check"
+        width={20}
+        height={20}
+      />
+    ),
     title: "Upload & Tokenize",
     caption:
       "Record and upload stories as video or audio, which are securely minted as NFTs for preservation.",
   },
   {
     icon: <BadgeCheckIcon className="w-5 h-5" />,
+    image: (
+      <Image
+        src={`/assets/landing-page/circle-badge.png`}
+        alt="Circle Badge"
+        width={20}
+        height={20}
+      />
+    ),
     title: "Validate & Earn",
     caption:
       "Contribute to authenticating content to earn rewards, or sell your tokenized collections to interested buyers.",
@@ -128,12 +158,14 @@ const steps: StepsProp[] = [
 
 interface StepsProp {
   icon: ReactElement;
+  image: ReactElement;
   title: string;
   caption: string;
 }
 
 interface StepComponentProp {
   icon: ReactElement;
+  image: ReactElement;
   number: number;
   title: string;
   caption: string;
