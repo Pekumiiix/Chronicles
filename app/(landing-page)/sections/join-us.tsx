@@ -48,42 +48,7 @@ export default function JoinUs() {
           captionClass="md:text-xl w-full text-[#9A9A9A]"
         />
 
-        <AnimatedBorderWrapper className="w-full h-[58px] rounded-[27px] p-[1px]">
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="absolute w-full h-full rounded-[27px]"
-            >
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="h-[54px] -mt-1.5 rounded-[27px] p-0">
-                    <FormLabel className="hidden">Email</FormLabel>
-                    <FormControl className="h-[54px] rounded-[27px]">
-                      <div className="flex items-center bg-black p-[3px] rounded-[27px] min-h-full gap-8">
-                        <Input
-                          placeholder="Email address"
-                          {...field}
-                          className="text-xs text-white font-medium placeholder:text-placeholder p-0 pl-5 border-none ring-0 focus-visible:ring-0 shadow-none"
-                        />
-                        <Button
-                          type="submit"
-                          className="rounded-[24px] px-5 h-full bg-[#A10145]"
-                        >
-                          Sign Up
-                        </Button>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </form>
-          </Form>
-        </AnimatedBorderWrapper>
-
-        {/* <Form {...form}>
+        <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
             <FormField
               control={form.control}
@@ -92,26 +57,28 @@ export default function JoinUs() {
                 <FormItem>
                   <FormLabel className="hidden">Email</FormLabel>
                   <FormControl>
-                    <div className="flex items-center border border-stroke p-[3px] pl-5 rounded-[27px] h-[54px] gap-8">
-                      <Input
-                        placeholder="Email address"
-                        {...field}
-                        className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
-                      />
-                      <Button
-                        type="submit"
-                        className="rounded-[24px] px-5 h-full bg-[#A10145]"
-                      >
-                        Sign Up
-                      </Button>
-                    </div>
+                    <AnimatedBorderWrapper className="flex items-center justify-center w-full h-[54px] rounded-[27px] p-1">
+                      <div className="absolute w-[calc(100%-4px)] h-[calc(100%-2px)] flex items-center pl-5 p-[3px] rouded-[27px] gap-8 bg-black">
+                        <Input
+                          placeholder="Email address"
+                          {...field}
+                          className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
+                        />
+                        <Button
+                          type="submit"
+                          className="rounded-[24px] px-5 h-full bg-[#A10145]"
+                        >
+                          Sign Up
+                        </Button>
+                      </div>
+                    </AnimatedBorderWrapper>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </form>
-        </Form> */}
+        </Form>
       </div>
 
       <div className="flex flex-col items-center gap-5">
