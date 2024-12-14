@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CardStack() {
   return (
-    <div className="relative lg:absolute flex items-center h-[276px] w-[200px] md:h-[417px] md:w-[286px] lg:-top-[50px] lg:right-[150px] -z-10">
+    <div className="relative lg:absolute flex items-center h-[276px] w-[200px] md:h-[417px] md:w-[286px] lg:top-[50px] lg:right-[150px] z-0">
       <div className="w-full h-full opacity-50 rounded-3xl bg-[#E8E8E8] rotate-[-6deg] p-0">
         <img
           src="/assets/landing-page/brick.png"
