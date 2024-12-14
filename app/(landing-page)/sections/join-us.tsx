@@ -57,8 +57,8 @@ export default function JoinUs() {
                 <FormItem>
                   <FormLabel className="hidden">Email</FormLabel>
                   <FormControl>
-                    <AnimatedBorderWrapper className="flex items-center justify-center w-full h-[54px] rounded-[27px] p-1">
-                      <div className="absolute w-[calc(100%-4px)] h-[calc(100%-2px)] flex items-center pl-5 p-[3px] rouded-[27px] gap-8 bg-black">
+                    <AnimatedBorderWrapper className="flex items-center justify-center w-full h-[54px] rounded-[27px]">
+                      <div className="absolute w-[calc(100%-4px)] h-[calc(100%-2px)] flex items-center p-[3px] pl-5 rouded-[27px] gap-8 bg-black">
                         <Input
                           placeholder="Email address"
                           {...field}
