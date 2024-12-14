@@ -26,14 +26,14 @@ export default function Hero() {
       />
 
       <div className="flex flex-col gap-2.5 items-center">
-        <div className="flex w-full justify-start gap-1">
+        <div className="flex w-full justify-center md:justify-start gap-1">
           <JetIcon />
           <p className="text-xs leading-none bg-text-gradient bg-clip-text text-transparent">
             1,500 CREATORS REWARDED
           </p>
         </div>
         <div className="w-full flex flex-col items-center lg:items-start gap-4 lg:gap-8 md:mb-14">
-          <p className="flex lg:hidden text-left md:text-center text-[40px] leading-[44px] md:text-5xl font-black">
+          <p className="flex lg:hidden text-center text-[40px] leading-[44px] md:text-5xl font-black">
             Your Stories Today, Legacy For Generation
           </p>
           <div className="w-full hidden lg:flex flex-col text-7xl font-black leading-[80px]">
@@ -49,7 +49,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-sm md:text-lg text-caption lg:text-left max-w-[493px]">
+          <p className="text-sm text-center md:text-lg text-caption lg:text-left max-w-[493px]">
             Transform your cultural memories into digital treasures that future
             generations will cherish through innovative digital ownership
           </p>

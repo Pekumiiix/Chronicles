@@ -4,14 +4,11 @@ import CloudCheckIcon from "@/components/icons/cloud-check";
 import SectionDescription from "../components/section-description";
 import RoundUserIcon from "@/components/icons/round-user";
 import BadgeCheckIcon from "@/components/icons/badge-check";
+import BorderBottomGradient from "../components/border-bottom-gradient";
 
 export default function HowItWorks() {
   return (
     <section className="container py-16 px-5 lg:px-32 flex flex-col gap-[72px] items-center">
-      {/* <p className="text-foregrpund text-[32px] md:text-[56px] leading-[62px] font-extrabold">
-        How It Works
-      </p> */}
-
       <SectionDescription
         title="How It Works"
         caption="From Your Voice to the World: Transform, Share, and Preserve Stories for Generations."
@@ -19,16 +16,31 @@ export default function HowItWorks() {
         captionClass="md:text-lg w-full"
       />
 
-      <div className="flex flex-col gap-20 lg:gap-0 items-center py-[9px] max-w-full lg:max-w-[1110px]">
-        {steps.map((item: StepsProp, index: number) => (
-          <Steps
-            key={index}
-            icon={item.icon}
-            number={index + 1}
-            title={item.title}
-            caption={item.caption}
-          />
-        ))}
+      <div className="flex flex-col gap-12 lg:gap-0 items-center py-[9px] max-w-full lg:max-w-[1110px]">
+        <Steps
+          icon={steps[0].icon}
+          number={1}
+          title={steps[0].title}
+          caption={steps[0].caption}
+        />
+
+        <BorderBottomGradient />
+
+        <Steps
+          icon={steps[1].icon}
+          number={2}
+          title={steps[1].title}
+          caption={steps[1].caption}
+        />
+
+        <BorderBottomGradient />
+
+        <Steps
+          icon={steps[2].icon}
+          number={3}
+          title={steps[2].title}
+          caption={steps[2].caption}
+        />
       </div>
     </section>
   );

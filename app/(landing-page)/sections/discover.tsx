@@ -92,7 +92,7 @@ function NFTCards({
         />
       </div>
 
-      <p className="absolute top-5 right-5 py-1 px-1.5 bg-white rounded-[4px] text-caption text-[9px]">
+      <p className="absolute top-2 right-2 md:top-5 md:right-5 py-1 px-1.5 bg-white rounded-[4px] text-caption text-[9px]">
         {category}
       </p>
 
