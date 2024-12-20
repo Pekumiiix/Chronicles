@@ -104,7 +104,7 @@ function NFTCards({
   );
 }
 
-const top_card_details = [
+const top_card_details: CardProp[] = [
   {
     image: "/assets/landing-page/nfts/ubuntu.png",
     title: "Ubuntu: I Am Because We Are",
@@ -124,73 +124,85 @@ const top_card_details = [
     category: "Trending",
   },
   {
-    image: "/assets/landing-page/nfts/tongue.jpg",
+    image: "/assets/landing-page/nfts/lost-tongue.png",
     title: "Lost Tongues of Africa",
     caption: "By BBC",
     category: "Languages",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/untold-stories.png",
     title: "Untold Stories of Nigerias Unity",
     caption: "By Fela Kuti",
     category: "Historical Narratives",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/rise.png",
     title: "Rise and Fall of Oyo Empire",
     caption: "By Sahara Africa",
     category: "Historical Narratives",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/great-zimbabwe.png",
     title: "Great Zimbabwe: Shona Legacy",
     caption: "By Cultural Archives DAO",
     category: "Historical Narratives",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/zulu-wedding.png",
     title: "Zulu Wedding Harmonies",
     caption: "By Cultural Archives DAO",
     category: "Songs & Chants",
   },
 ];
 
-const bottom_card_details = [
+const bottom_card_details: CardProp[] = [
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/mirror.png",
     title: "I am a Mirror but I Do Not Reflect",
     caption: "By Cultural Archives DAO",
     category: "Proverbs & Riddles",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/adire-makers.png",
     title: "The Adire Makers of Abeokuta",
     caption: "By Cultural Archives DAO",
     category: "Traditional Knowledge",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/figua.png",
     title: "Bone Fixers of Ugua",
     caption: "By Cultural Archives DAO",
     category: "Traditional Knowledge",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/king.png",
     title: "The Tortoise and the King",
     caption: "By Decima Web3",
     category: "Folklore & Myths",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/bush-babies.png",
     title: "Legends of The Bush Babies",
     caption: "By Cultural Archives DAO",
     category: "Folklores & Myths",
   },
   {
-    image: "/assets/landing-page/nfts/timeless.png",
+    image: "/assets/landing-page/nfts/wisdom.png",
     title: "Wisdom of the Hausa Healers",
     caption: "By Hauwa Dairies",
     category: "Traditional Knowledge",
+  },
+  {
+    image: "/assets/landing-page/nfts/great-benin.png",
+    title: "Legends of The Great Benin",
+    caption: "By Pluto Groups",
+    category: "Folklore & Myths",
+  },
+  {
+    image: "/assets/landing-page/nfts/fulani.png",
+    title: "The Fulani Nomadic Journey",
+    caption: "By Hauwa Dairies",
+    category: "Historical Narratives",
   },
 ];
 

@@ -34,7 +34,7 @@ export default function FaqSection() {
 function FaqAccordion({ trigger, content, index }: AccordionProps) {
   return (
     <AccordionItem value={`index-${index + 1}`} className="border-stroke">
-      <AccordionTrigger className="text-foreground font-semibold">
+      <AccordionTrigger className="text-foreground font-semibold pr-3">
         {trigger}
       </AccordionTrigger>
       <AccordionContent className="text-sm text-[#5E5E66]">

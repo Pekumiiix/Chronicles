@@ -14,11 +14,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Twitter, Youtube, Instagram } from "lucide-react";
 import DiscordIcon from "@/components/icons/discord";
-import FacebookIcon from "@/components/icons/facebook";
 import Link from "next/link";
 import { ReactElement } from "react";
+import XIcon from "@/components/icons/X";
+import InstagramIcon from "@/components/icons/instagram";
+import FacebookIcon02 from "@/components/icons/facebook02";
+import YoutubeIcon from "@/components/icons/youtube";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -44,7 +46,7 @@ export default function JoinUs() {
         <SectionDescription
           title="Be Part of a Living Legacy"
           caption="Connect with storytellers, history enthusiasts, and cultural custodians shaping the future of our heritage."
-          titleClass="md:text-5xl md:leading-[53px] text-center md:text-left text-white"
+          titleClass="leading-[35px] md:text-5xl md:leading-[53px] text-center md:text-left text-white"
           captionClass="md:text-xl w-full text-[#9A9A9A]"
         />
 
@@ -128,22 +130,22 @@ const community_links: LinkProps[] = [
   },
   {
     href: "/",
-    icon: <Twitter size="32px" fill="#ffffff" color="#ffffff" />,
-    bg: "bg-[#5865F2]",
+    icon: <XIcon className="w-8 h-8" />,
+    bg: "bg-black",
   },
   {
     href: "/",
-    icon: <Youtube size="32px" fill="#ffffff" color="#FF0000" />,
-    bg: "bg-[#FF0000]",
+    icon: <YoutubeIcon className="w-8 h-8" />,
+    bg: "bg-white",
   },
   {
     href: "/",
-    icon: <Instagram size="32px" fill="white" color="#757575" />,
+    icon: <InstagramIcon className="w-8 h-8" />,
     bg: "bg-custom-conic",
   },
   {
     href: "/",
-    icon: <FacebookIcon className="w-8 h-8 fill-white" />,
+    icon: <FacebookIcon02 className="w-8 h-8" />,
     bg: "bg-[#3D5A98]",
   },
 ];
