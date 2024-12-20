@@ -6,7 +6,7 @@ import JetIcon from "@/components/icons/jet-icon";
 
 export default function Hero() {
   return (
-    <section className="relative container pt-[105px] pb-8 px-5 lg:px-32 flex flex-col-reverse items-center lg:items-stretch lg:flex-col lg:justify-end gap-14 h-fit bg-hero-bg bg-center bg-cover -mt-[105px]">
+    <section className="relative w-full max-w-[1536px] pt-[105px] pb-8 px-5 lg:px-32 flex flex-col-reverse items-center lg:items-stretch lg:flex-col lg:justify-end gap-14 h-fit bg-hero-bg bg-center bg-cover -mt-[105px]">
       <CardStack />
 
       <Image
