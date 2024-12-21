@@ -46,7 +46,7 @@ export default function JoinUs() {
         <SectionDescription
           title="Be Part of a Living Legacy"
           caption="Connect with storytellers, history enthusiasts, and cultural custodians shaping the future of our heritage."
-          titleClass="leading-[35px] md:text-5xl md:leading-[53px] text-center md:text-left text-white"
+          titleClass="md:text-5xl md:leading-[53px] text-center md:text-left text-white"
           captionClass="md:text-xl w-full text-[#9A9A9A]"
         />
 
