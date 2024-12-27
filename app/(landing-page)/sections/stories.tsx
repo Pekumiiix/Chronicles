@@ -14,7 +14,7 @@ export default function StoriesSection() {
       <SectionDescription
         title="Why Your Stories Matter"
         caption="Preserve, share, and celebrate the cultural treasures that define who you are, ensuring they inspire future generations for years to come."
-        titleClass="md:text-[56px] text-center text-left"
+        titleClass="md:text-[56px] md:leading-[62px] text-center text-left"
         captionClass="md:text-lg max-w-[776px]"
       />
 
