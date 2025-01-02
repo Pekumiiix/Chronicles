@@ -14,11 +14,13 @@ export default function LandingPageLayout({
 }>) {
   return (
     <body
-      className={`${HK_Nova.variable} flex flex-col items-center gap-10 md:gap-[105px]`}
+      className={`${HK_Nova.variable} flex flex-col items-center gap-10 md:gap-[105px] pb-8`}
     >
       <Header />
 
-      {children}
+      <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
+        {children}
+      </main>
 
       <Footer />
     </body>
