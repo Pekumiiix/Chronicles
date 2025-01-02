@@ -36,8 +36,8 @@ export default function DiscoverTab() {
 
 const tab_triggers: string[] = ["Featured", "Browse", "Recents"];
 
-const tab_contents = [
-  { value: "Featured", element: undefined },
-  { value: "Browse", element: undefined },
-  { value: "Mint", element: undefined },
-];
+// const tab_contents = [
+//   { value: "Featured", element: undefined },
+//   { value: "Browse", element: undefined },
+//   { value: "Mint", element: undefined },
+// ];

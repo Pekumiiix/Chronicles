@@ -8,7 +8,6 @@ import {
 import Image from "next/image";
 import Seperator from "../../_components/seperator";
 import { top_card_details } from "@/app/data/nft-card-details";
-import { Item } from "@radix-ui/react-accordion";
 import clsx from "clsx";
 
 export default function PopularStories() {
@@ -146,7 +145,7 @@ function StoryCard({
 function Statistics() {
   return (
     <div className="flex flex-col bg-white p-5 rounded-[15px] gap-3 sticky bottom-5">
-      <p className="text-sm font-semibold">Today's Statistics</p>
+      <p className="text-sm font-semibold">Today&apos;s Statistics</p>
 
       <div className="flex w-full items-center justify-between">
         <StatisticsCard
