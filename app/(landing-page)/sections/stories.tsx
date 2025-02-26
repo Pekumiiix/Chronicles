@@ -1,11 +1,11 @@
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import { ReactElement } from "react";
 import DatabaseIcon from "@/components/icons/database";
 import AccessibilityIcon from "@/components/icons/accessibility";
 import GroupUserIcon from "@/components/icons/group-user";
 import Books from "@/components/icons/books";
 import SquareUserIcon from "@/components/icons/square-user";
-import BorderBottomGradient from "../components/border-bottom-gradient";
+import BorderBottomGradient from "../../../components/custom/border-bottom-gradient";
 import CircleDollarSign from "@/components/icons/circle-dollar-sign";
 
 export default function StoriesSection() {

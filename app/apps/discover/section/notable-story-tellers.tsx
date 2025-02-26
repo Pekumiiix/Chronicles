@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { StoryDetails } from "./tabs/featured";
 import {
   notable_story_tellers,
   NotableStoryTellerProps,
 } from "@/app/data/notable-story-tellers";
+import StoryDetails from "@/components/custom/story-details";
 
 export default function NotableStoryTellersSection() {
   return (

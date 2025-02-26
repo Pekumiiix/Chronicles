@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import Seperator from "../_components/seperator";
+import Seperator from "../../../components/custom/seperator";
 
 export default function HeaderSection() {
   return (

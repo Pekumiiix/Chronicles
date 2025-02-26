@@ -1,6 +1,6 @@
 "use client";
 
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";

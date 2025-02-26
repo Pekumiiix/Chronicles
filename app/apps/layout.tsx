@@ -1,4 +1,4 @@
-import Background from "./_components/background";
+import Background from "../../components/custom/background";
 import HeaderSection from "./_sections/header";
 
 export default function AppsPageLayout({

@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
-import AnimatedBorderWrapper from "../components/animated-border-wrapper";
+import AnimatedBorderWrapper from "../../../components/custom/animated-border-wrapper";
 import CloudCheckIcon from "@/components/icons/cloud-check";
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import RoundUserIcon from "@/components/icons/round-user";
 import BadgeCheckIcon from "@/components/icons/badge-check";
-import BorderBottomGradient from "../components/border-bottom-gradient";
+import BorderBottomGradient from "../../../components/custom/border-bottom-gradient";
 import Image from "next/image";
 
 export default function HowItWorks() {

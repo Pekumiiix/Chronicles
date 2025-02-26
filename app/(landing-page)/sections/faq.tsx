@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 
 export default function FaqSection() {
   return (
