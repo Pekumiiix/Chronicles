@@ -21,12 +21,14 @@ export default async function CollectiobPage({
   }
 
   return (
-    <section className="container max-w-[870px] flex flex-col gap-12 items-center">
-      <CollectionDetailsContainer selectedCollection={sellectedCollection} />
+    <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
+      <section className="container max-w-[870px] flex flex-col gap-12 items-center">
+        <CollectionDetailsContainer selectedCollection={sellectedCollection} />
 
-      <AboutCollection selectedCollection={sellectedCollection} />
+        <AboutCollection selectedCollection={sellectedCollection} />
 
-      <AllStories />
-    </section>
+        <AllStories />
+      </section>
+    </main>
   );
 }

@@ -61,7 +61,7 @@ function NavLeft() {
 
 function NavRight() {
   return (
-    <div className="flex items-center gap-8 bg-secondary">
+    <div className="flex items-center gap-8 bg-transparent">
       <div className="flex items-center rounded-[20px] bg-background p-2 pl-4 min-w-[387px] h-10">
         <Input
           placeholder="Search collections"

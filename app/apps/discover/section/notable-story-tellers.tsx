@@ -7,7 +7,7 @@ import StoryDetails from "@/components/custom/story-details";
 
 export default function NotableStoryTellersSection() {
   return (
-    <div className="w-full flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-2 pb-5">
       <p className="font-semibold text-primary-foreground pb-3">
         Notable Storytellers
       </p>
