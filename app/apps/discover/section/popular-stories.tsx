@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Image from "next/image";
-import Seperator from "../../_components/seperator";
+import Seperator from "../../../../components/custom/seperator";
 import { top_card_details } from "@/app/data/nft-card-details";
 import clsx from "clsx";
 
@@ -94,7 +94,7 @@ function StoryCard({
       <div className="flex items-center gap-3">
         <Image
           src={image}
-          alt=""
+          alt={story_title}
           width={72}
           height={72}
           className="rounded-[8px] h-[72px] w-[72px]"

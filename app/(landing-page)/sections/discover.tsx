@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import {
   top_card_details,
   bottom_card_details,

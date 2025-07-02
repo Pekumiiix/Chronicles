@@ -1,11 +1,12 @@
 import { ReactElement } from "react";
-import AnimatedBorderWrapper from "../components/animated-border-wrapper";
 import CloudCheckIcon from "@/components/icons/cloud-check";
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import RoundUserIcon from "@/components/icons/round-user";
 import BadgeCheckIcon from "@/components/icons/badge-check";
-import BorderBottomGradient from "../components/border-bottom-gradient";
+import BorderBottomGradient from "../../../components/custom/border-bottom-gradient";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function HowItWorks() {
   return (
@@ -20,7 +21,8 @@ export default function HowItWorks() {
       <div className="flex flex-col gap-12 lg:gap-0 items-center py-[9px] max-w-full lg:max-w-[1110px]">
         <Steps
           icon={steps[0].icon}
-          image={steps[0].image}
+          src={steps[0].src}
+          alt={steps[0].alt}
           number={1}
           title={steps[0].title}
           caption={steps[0].caption}
@@ -30,7 +32,8 @@ export default function HowItWorks() {
 
         <Steps
           icon={steps[1].icon}
-          image={steps[1].image}
+          src={steps[1].src}
+          alt={steps[1].alt}
           number={2}
           title={steps[1].title}
           caption={steps[1].caption}
@@ -40,7 +43,8 @@ export default function HowItWorks() {
 
         <Steps
           icon={steps[2].icon}
-          image={steps[2].image}
+          src={steps[2].src}
+          alt={steps[2].alt}
           number={3}
           title={steps[2].title}
           caption={steps[2].caption}
@@ -50,56 +54,76 @@ export default function HowItWorks() {
   );
 }
 
-function Steps({ icon, image, number, title, caption }: StepComponentProp) {
+function Steps({
+  icon,
+  src,
+  alt,
+  number,
+  title,
+  caption,
+}: StepsProp & { number: number }) {
   return (
     <div
-      className={`flex gap-5 lg:gap-0 items-center lg:items-stretch ${
-        number % 2 ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"
-      } lg:max-w-[1110px]`}
+      className={cn(
+        "flex gap-5 lg:gap-0 items-center lg:items-stretch lg:max-w-[1110px]",
+        {
+          "flex-col lg:flex-row": number % 2,
+          "flex-col lg:flex-row-reverse": !(number % 2),
+        }
+      )}
     >
       <div
-        className={`hidden md:flex ${
-          number % 2 ? "justify-end" : "justify-start"
-        } lg:px-16 lg:pb-16 w-fit lg:w-[555px]`}
+        className={cn("hidden md:flex lg:px-16 lg:pb-16 w-fit lg:w-1/2", {
+          "justify-end": number % 2,
+          "justify-start lg:mr-1": !(number % 2),
+        })}
       >
-        <AnimatedBorderWrapper>
-          <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
-            <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
-              <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
-            </div>
+        {/** For desktop */}
+        <div className="relative w-[196px] h-[148px] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
+          <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
+            <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
           </div>
-        </AnimatedBorderWrapper>
+          <BorderBeam size={120} borderWidth={3} className="absolute" />
+        </div>
       </div>
 
-      <AnimatedBorderWrapper className="flex md:hidden w-[100px] h-[75px] rounded-full">
-        <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-[#FFFDFC] rounded-full flex items-center justify-center">
-          <div className="flex p-2 rounded-full bg-[#E8E8E8]">{image}</div>
+      {/** For mobile */}
+      <div className="relative flex justify-center items-center md:hidden w-[100px] h-[75px] rounded-full">
+        <div className="flex p-2 rounded-full bg-[#E8E8E8]">
+          <Image src={src} alt={alt} width={20} height={20} />
         </div>
-      </AnimatedBorderWrapper>
+        <BorderBeam size={75} />
+      </div>
 
       <div
-        className={`flex flex-col items-center lg:w-[555px] md:px-16 lg:pb-16 ${
-          number % 2
-            ? "gradient-border-left lg:items-start lg:-ml-1"
-            : "gradient-border-right lg:items-end"
-        } ${number === 3 && "gradient-border-left-2"} gap-4`}
+        className={cn(
+          "flex flex-col items-center lg:w-1/2 md:px-16 lg:pb-16 gap-4",
+          {
+            "gradient-border-left lg:items-start lg:-ml-1": number % 2,
+            "gradient-border-right lg:items-end": !(number % 2),
+            "gradient-border-left-2": number === 3,
+          }
+        )}
       >
         <p className="hidden lg:flex bg-stroke w-12 h-12 rounded-full text-[#080808] text-2xl font-semibold items-center justify-center">
           {number}
         </p>
 
         <div
-          className={`flex flex-col items-center gap-2 ${
-            number % 2 ? "lg:items-start" : "lg:items-end"
-          }`}
+          className={cn("flex flex-col items-center gap-2", {
+            "lg:items-start": number % 2,
+            "lg:items-end": !(number % 2),
+          })}
         >
           <p className="text-[#080808] text-lg md:text-2xl font-semibold">
             {title}
           </p>
+
           <p
-            className={`text-caption text-sm md:text-lg text-center ${
-              number % 2 ? "lg:text-left" : "lg:text-right"
-            }`}
+            className={cn("text-caption text-sm md:text-lg text-center", {
+              "lg:text-left": number % 2,
+              "lg:text-right": !(number % 2),
+            })}
           >
             {caption}
           </p>
@@ -112,42 +136,24 @@ function Steps({ icon, image, number, title, caption }: StepComponentProp) {
 const steps: StepsProp[] = [
   {
     icon: <RoundUserIcon className="w-5 h-5" />,
-    image: (
-      <Image
-        src={`/assets/landing-page/circle-user.png`}
-        alt="Circle User"
-        width={20}
-        height={20}
-      />
-    ),
+    src: "/assets/landing-page/circle-user.png",
+    alt: "Circle User",
     title: "Sign Up",
     caption:
       "Create your account and setup your wallet to become part of a global network dedicated to preserving heritage.",
   },
   {
     icon: <CloudCheckIcon className="w-5 h-5" />,
-    image: (
-      <Image
-        src={`/assets/landing-page/cloud-check.png`}
-        alt="Cloud Check"
-        width={20}
-        height={20}
-      />
-    ),
+    src: "/assets/landing-page/cloud-check.png",
+    alt: "Cloud Check",
     title: "Upload & Tokenize",
     caption:
       "Record and upload stories as video or audio, which are securely minted as NFTs for preservation.",
   },
   {
     icon: <BadgeCheckIcon className="w-5 h-5" />,
-    image: (
-      <Image
-        src={`/assets/landing-page/circle-badge.png`}
-        alt="Circle Badge"
-        width={20}
-        height={20}
-      />
-    ),
+    src: "/assets/landing-page/circle-badge.png",
+    alt: "Circle Badge",
     title: "Validate & Earn",
     caption:
       "Contribute to authenticating content to earn rewards, or sell your tokenized collections to interested buyers.",
@@ -156,15 +162,8 @@ const steps: StepsProp[] = [
 
 interface StepsProp {
   icon: ReactElement;
-  image: ReactElement;
-  title: string;
-  caption: string;
-}
-
-interface StepComponentProp {
-  icon: ReactElement;
-  image: ReactElement;
-  number: number;
+  alt: string;
+  src: string;
   title: string;
   caption: string;
 }

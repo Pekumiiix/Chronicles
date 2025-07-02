@@ -1,8 +1,10 @@
-import Seperator from "@/app/apps/_components/seperator";
+import Seperator from "@/components/custom/seperator";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { nfts_collection_details } from "@/app/data/nft-collection-details";
 import { Badge } from "@/components/ui/badge";
+import VerifiedBadge from "@/components/custom/verified-badge";
+import StoryDetails from "@/components/custom/story-details";
 
 export default function FeaturedTab() {
   return (
@@ -15,15 +17,6 @@ export default function FeaturedTab() {
           height={264}
           className="absolute w-full h-full -z-10 rounded-2xl"
         />
-
-        {/* <div className="flex flex-col gap-2 py-3 px-4 rounded-xl  w-full">
-          <p className="text-primary-foreground text-[10px]">
-            {nfts_collection_details[0].author}
-          </p>
-          <p className="text-primary-foreground font-semibold text-sm">
-            {nfts_collection_details[0].title}
-          </p>
-        </div> */}
       </div>
 
       <div className="flex flex-col min-h-full justify-between gap-2 max-w-[231px]">
@@ -42,17 +35,7 @@ export default function FeaturedTab() {
               </Badge>
             ))}
 
-            {nfts_collection_details[0].verified && (
-              <Badge className="flex gap-0.5 border border-[#FFFDFC] bg-[#EAF6EA] text-[#008000] py-0.5 px-2 rounded-xl hover:bg-[#EAF6EA]">
-                <Image
-                  src={`/assets/apps/card/Sparkle.png`}
-                  alt="Sparkle"
-                  width={8}
-                  height={8}
-                />
-                Verified
-              </Badge>
-            )}
+            {nfts_collection_details[0].verified && <VerifiedBadge />}
           </div>
 
           <Button
@@ -84,26 +67,6 @@ export default function FeaturedTab() {
             name="Floor"
           />
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function StoryDetails({
-  count,
-  image,
-  name,
-}: {
-  count: number | string;
-  image?: string;
-  name: string;
-}) {
-  return (
-    <div className="flex flex-col">
-      <p className="text-[10px] text-primary-foreground">{count}</p>
-      <div className="flex items-center gap-1">
-        {image && <Image src={image} alt={name} width={12} height={12} />}
-        <p className="text-[8px] text-border">{name}</p>
       </div>
     </div>
   );

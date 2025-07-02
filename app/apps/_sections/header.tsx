@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import Seperator from "../_components/seperator";
+import Seperator from "../../../components/custom/seperator";
 
 export default function HeaderSection() {
   return (
@@ -61,7 +61,7 @@ function NavLeft() {
 
 function NavRight() {
   return (
-    <div className="flex items-center gap-8 bg-secondary">
+    <div className="flex items-center gap-8 bg-transparent">
       <div className="flex items-center rounded-[20px] bg-background p-2 pl-4 min-w-[387px] h-10">
         <Input
           placeholder="Search collections"

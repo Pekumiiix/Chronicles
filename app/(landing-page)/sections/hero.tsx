@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import CardStack from "../components/card-stack";
+import CardStack from "../../../components/custom/card-stack";
 import JetIcon from "@/components/icons/jet-icon";
 
 export default function Hero() {

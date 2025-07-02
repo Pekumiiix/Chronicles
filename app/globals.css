@@ -177,3 +177,7 @@
     border-image-slice: 2;
   }
 }
+
+.collection-card-container::-webkit-scrollbar {
+  display: none;
+}

@@ -1,18 +1,10 @@
 "use client";
 
-import SectionDescription from "../components/section-description";
+import SectionDescription from "../../../components/custom/section-description";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import DiscordIcon from "@/components/icons/discord";
 import Link from "next/link";
@@ -21,6 +13,8 @@ import XIcon from "@/components/icons/X";
 import InstagramIcon from "@/components/icons/instagram";
 import FacebookIcon02 from "@/components/icons/facebook02";
 import YoutubeIcon from "@/components/icons/youtube";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import { FormBase, FormField } from "@/components/reusesable/base-form";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -50,37 +44,30 @@ export default function JoinUs() {
           captionClass="md:text-xl w-full text-[#9A9A9A]"
         />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="hidden">Email</FormLabel>
-                  <FormControl>
-                    <AnimatedBorderWrapper className="flex items-center justify-center w-full h-[54px] rounded-[27px]">
-                      <div className="absolute w-[calc(100%-4px)] h-[calc(100%-2px)] flex items-center p-[3px] pl-5 rouded-[27px] gap-8 bg-black">
-                        <Input
-                          placeholder="Email address"
-                          {...field}
-                          className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
-                        />
-                        <Button
-                          type="submit"
-                          className="rounded-[24px] px-5 h-full bg-[#A10145]"
-                        >
-                          Sign Up
-                        </Button>
-                      </div>
-                    </AnimatedBorderWrapper>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </form>
-        </Form>
+        <FormBase
+          form={form}
+          onSubmit={onSubmit}
+          className="max-w-[662px] w-full"
+        >
+          <FormField form={form} name="email">
+            {(field) => (
+              <div className="relative w-full h-[54px] flex items-center p-[3px] pl-5 rouded-[27px] gap-8 bg-black border border-white/20 rounded-[27px]">
+                <Input
+                  placeholder="Email address"
+                  {...field}
+                  className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
+                />
+                <Button
+                  type="submit"
+                  className="rounded-[24px] px-5 h-full bg-[#A10145]"
+                >
+                  Sign Up
+                </Button>
+                <BorderBeam size={150} />
+              </div>
+            )}
+          </FormField>
+        </FormBase>
       </div>
 
       <div className="flex flex-col items-center gap-5">
@@ -101,24 +88,6 @@ export default function JoinUs() {
         </div>
       </div>
     </section>
-  );
-}
-
-function AnimatedBorderWrapper({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`card-wrapper-two ${
-        className ? className : "w-[196px] h-[148px] rounded-xl"
-      }`}
-    >
-      {children}
-    </div>
   );
 }
 
