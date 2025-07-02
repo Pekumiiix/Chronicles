@@ -32,3 +32,11 @@ export default async function CollectiobPage({
     </main>
   );
 }
+
+export async function generateStaticParams() {
+  // Return an array of all possible params
+  // Example:
+  return collection.map((item) => ({
+    collectionId: item.id.toString(),
+  }));
+}
