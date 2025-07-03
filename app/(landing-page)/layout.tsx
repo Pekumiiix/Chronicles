@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "./sections/footer";
 import Header from "./sections/header";
 import { AuthProvider } from "../contexts/auth";
