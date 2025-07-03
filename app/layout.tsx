@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const HK_Nova = localFont({
+  src: "./fonts/HKNova-Medium.ttf",
+  variable: "--HK-Nova",
+});
 
 export const metadata: Metadata = {
   title: "Chronicles: Blockchain Oral History Preservation Network",
@@ -35,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="p-0 m-0">
+    <html lang="en" className={`p-0 m-0 ${HK_Nova.variable}`}>
       {children}
     </html>
   );

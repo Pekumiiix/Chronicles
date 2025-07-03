@@ -1,11 +1,7 @@
 import Footer from "./sections/footer";
-import localFont from "next/font/local";
 import Header from "./sections/header";
-
-const HK_Nova = localFont({
-  src: "../fonts/HKNova-Medium.ttf",
-  variable: "--HK-Nova",
-});
+import { AuthProvider } from "../contexts/auth";
+import { AuthModal } from "../(auth)";
 
 export default function LandingPageLayout({
   children,
@@ -13,16 +9,17 @@ export default function LandingPageLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body
-      className={`${HK_Nova.variable} flex flex-col items-center gap-10 md:gap-[105px]`}
-    >
-      <Header />
+    <AuthProvider>
+      <AuthModal />
+      <body className="flex flex-col items-center gap-10 md:gap-[105px]">
+        <Header />
 
-      <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
-        {children}
-      </main>
+        <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
+          {children}
+        </main>
 
-      <Footer />
-    </body>
+        <Footer />
+      </body>
+    </AuthProvider>
   );
 }
