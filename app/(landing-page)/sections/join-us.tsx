@@ -51,19 +51,21 @@ export default function JoinUs() {
         >
           <FormField form={form} name="email">
             {(field) => (
-              <div className="relative w-full h-[54px] flex items-center p-[3px] pl-5 rouded-[27px] gap-8 bg-black border border-white/20 rounded-[27px]">
-                <Input
-                  placeholder="Email address"
-                  {...field}
-                  className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
-                />
-                <Button
-                  type="submit"
-                  className="rounded-[24px] px-5 h-full bg-[#A10145]"
-                >
-                  Sign Up
-                </Button>
-                <BorderBeam size={150} />
+              <div className="relative w-full h-[54px] flex items-center p-[2px] gap-8 bg-black rounded-[27px]">
+                <div className="w-full h-full flex items-center gap-8 pl-5 rounded-[27px] bg-black z-10 p-[3px]">
+                  <Input
+                    placeholder="Email address"
+                    {...field}
+                    className="text-xs text-white font-medium placeholder:text-placeholder p-0 border-none ring-0 focus-visible:ring-0 shadow-none"
+                  />
+                  <Button
+                    type="submit"
+                    className="rounded-[24px] px-5 h-full bg-[#A10145]"
+                  >
+                    Sign Up
+                  </Button>
+                </div>
+                <BorderBeam size={375} />
               </div>
             )}
           </FormField>

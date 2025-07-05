@@ -79,20 +79,24 @@ function Steps({
         })}
       >
         {/** For desktop */}
-        <div className="relative w-[196px] h-[148px] bg-[#E8E8E8] rounded-xl flex items-center justify-center">
-          <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
-            <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+        <div className="relative w-[196px] h-[148px] bg-[#E8E8E8] rounded-xl flex items-center justify-center p-[2px]">
+          <div className="w-full h-full z-10 flex items-center justify-center bg-[#FFFDFC] rounded-xl">
+            <div className="flex py-2 px-5 rounded-3xl bg-[#FFFDFC]">
+              <div className="flex p-2 rounded-full bg-[#E8E8E8]">{icon}</div>
+            </div>
           </div>
-          <BorderBeam size={120} borderWidth={3} className="absolute" />
+          <BorderBeam size={250} className="!z-0" />
         </div>
       </div>
 
       {/** For mobile */}
-      <div className="relative flex justify-center items-center md:hidden w-[100px] h-[75px] rounded-full">
-        <div className="flex p-2 rounded-full bg-[#E8E8E8]">
-          <Image src={src} alt={alt} width={20} height={20} />
+      <div className="relative flex justify-center items-center md:hidden w-[100px] h-[75px] rounded-full p-[2px]">
+        <div className="w-full h-full z-10 flex items-center justify-center bg-[#E8E8E8] rounded-full">
+          <div className="flex p-2 rounded-full bg-[#E8E8E8] z-10">
+            <Image src={src} alt={alt} width={20} height={20} />
+          </div>
         </div>
-        <BorderBeam size={75} />
+        <BorderBeam size={100} />
       </div>
 
       <div
