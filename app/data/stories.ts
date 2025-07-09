@@ -20,7 +20,7 @@ export const all_stories: AllStoriesProp[] = [
   {
     image: "/assets/apps/card/Featured.png",
     type: "Audio recordings",
-    title: "Traditional Healing Methods",
+    title: "Traditional Healing Method",
     text_content:
       "Comprehensive documentation of medicinal plant knowledge, healing ceremonies, and ancestral therapeutic practices passed down through five generations of healers.",
     length: "15:24",
@@ -29,7 +29,7 @@ export const all_stories: AllStoriesProp[] = [
   {
     image: "/assets/apps/card/Featured.png",
     type: "Text documents",
-    title: "Traditional Healing Methods",
+    title: "Traditional-Healing Methods",
     text_content:
       "Comprehensive documentation of medicinal plant knowledge, healing ceremonies, and ancestral therapeutic practices passed down through five generations of healers.",
     length: "15:24",

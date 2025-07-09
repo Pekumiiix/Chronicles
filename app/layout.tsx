@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`p-0 m-0 ${HK_Nova.variable}`}>
-      {children}
+      <body>{children}</body>
     </html>
   );
 }

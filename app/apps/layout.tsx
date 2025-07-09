@@ -6,10 +6,10 @@ export default function AppsPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className={`relative flex flex-col items-center gap-10 bg-white`}>
+    <div className="relative flex flex-col items-center gap-10 bg-white">
       <HeaderSection />
 
       {children}
-    </body>
+    </div>
   );
 }

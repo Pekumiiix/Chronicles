@@ -10,6 +10,7 @@ import { all_stories, AllStoriesProp } from "@/app/data/stories";
 import Seperator from "@/components/custom/seperator";
 import { truncate } from "@/app/utils/truncate";
 import CustomDot from "@/components/custom/custom-dot";
+import React from "react";
 
 export default function AllStories() {
   const [displayStyle, setDisplayStyle] = useState<"List" | "Grid">("List");
@@ -60,26 +61,24 @@ export default function AllStories() {
         })}
       >
         {all_stories.map((item, index) => (
-          <>
+          <React.Fragment key={item.title}>
             {displayStyle === "List" ? (
-              <ListSyleStoryCard key={index} {...item} />
+              <ListSyleStoryCard {...item} />
             ) : (
-              <GridStyleStoryCard key={index} {...item} />
+              <GridStyleStoryCard {...item} />
             )}
 
             {displayStyle === "List" ? (
               <Seperator
-                key={index + 3}
                 orientation="horizontal"
                 className={index === all_stories.length - 1 ? "hidden" : ""}
               />
             ) : (
               <CustomDot
-                key={index + 3}
                 className={index === all_stories.length - 1 ? "hidden" : ""}
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

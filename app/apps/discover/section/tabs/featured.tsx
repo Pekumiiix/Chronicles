@@ -15,7 +15,7 @@ export default function FeaturedTab() {
           alt={nfts_collection_details[0].title}
           width={264}
           height={264}
-          className="absolute w-full h-full -z-10 rounded-2xl"
+          className="absolute w-full h-full rounded-2xl"
         />
       </div>
 

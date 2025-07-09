@@ -10,7 +10,7 @@ import Seperator from "../../../components/custom/seperator";
 
 export default function HeaderSection() {
   return (
-    <header className="w-full h-fit flex items-center justify-center">
+    <header className="w-full h-fit flex items-center justify-center z-10">
       <nav className="container flex items-center justify-between py-6 px-12">
         <NavLeft />
 
@@ -62,7 +62,7 @@ function NavLeft() {
 function NavRight() {
   return (
     <div className="flex items-center gap-8 bg-transparent">
-      <div className="flex items-center rounded-[20px] bg-background p-2 pl-4 min-w-[387px] h-10">
+      <div className="flex items-center rounded-[20px] bg-background p-2 pl-4 min-w-[387px] h-10 border border-black/20">
         <Input
           placeholder="Search collections"
           className="text-xs p-0 h-fit border-none shadow-none focus-visible:ring-0 "

@@ -8,7 +8,7 @@ export default function DiscoverIcon() {
     <>
       <Background />
 
-      <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
+      <main className="w-full flex flex-col items-center gap-10 md:gap-[105px] z-10">
         <section className="w-full container grid grid-cols-2">
           <div className="w-full flex flex-col gap-8 pr-12">
             <DiscoverTab />
