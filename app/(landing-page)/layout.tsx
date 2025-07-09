@@ -13,7 +13,7 @@ export default function LandingPageLayout({
   return (
     <AuthProvider>
       <AuthModal />
-      <body className="flex flex-col items-center gap-10 md:gap-[105px]">
+      <div className="flex flex-col items-center gap-10 md:gap-[105px]">
         <Header />
 
         <main className="w-full flex flex-col items-center gap-10 md:gap-[105px]">
@@ -21,7 +21,7 @@ export default function LandingPageLayout({
         </main>
 
         <Footer />
-      </body>
+      </div>
     </AuthProvider>
   );
 }
