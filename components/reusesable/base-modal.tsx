@@ -99,23 +99,29 @@ function BaseModal({
           }
         }}
       >
-        {!removeCancel && (
-          <div className="absolute max-w-[462px] top-5 flex w-full items-center justify-between opacity-60 py-2">
-            <Button
-              onClick={() => router.back()}
-              className="p-1 w-fit h-fit bg-transparent hover:bg-transparent"
-            >
-              <ArrowLeft color="#000000" size={24} />
-            </Button>
+        <div
+          className={cn(
+            "absolute max-w-[462px] top-5 w-full items-center justify-between opacity-60 py-2",
+            {
+              "flex sm:hidden": removeCancel,
+              flex: !removeCancel,
+            }
+          )}
+        >
+          <Button
+            onClick={() => router.back()}
+            className="p-1 w-fit h-fit bg-transparent hover:bg-transparent"
+          >
+            <ArrowLeft color="#000000" size={24} />
+          </Button>
 
-            <DialogClose
-              onClick={closeAuthModal}
-              className="min-w-6 z-10 relative p-1 w-fit h-fit"
-            >
-              <X color="#000000" size={24} className="min-w-6" />
-            </DialogClose>
-          </div>
-        )}
+          <DialogClose
+            onClick={closeAuthModal}
+            className="min-w-6 z-10 relative p-1 w-fit h-fit"
+          >
+            <X color="#000000" size={24} className="min-w-6" />
+          </DialogClose>
+        </div>
 
         <DialogHeader className="w-full flex flex-col items-center gap-2">
           <div className="p-4 size-16">
